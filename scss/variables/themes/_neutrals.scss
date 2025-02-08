@@ -1,0 +1,24 @@
+$neutral-50:  #fafafa !default;
+$neutral-100: #f5f5f5 !default;
+$neutral-200: #e5e5e5 !default;
+$neutral-300: #d4d4d4 !default;
+$neutral-400: #a3a3a3 !default;
+$neutral-500: #737373 !default;
+$neutral-600: #525252 !default;
+$neutral-700: #404040 !default;
+$neutral-800: #262626 !default;
+$neutral-900: #171717 !default;
+$neutral-950: #0a0a0a !default;
+$neutrals: (
+    "neutral-50": $neutral-50,
+    "neutral-100": $neutral-100,
+    "neutral-200": $neutral-200,
+    "neutral-300": $neutral-300,
+    "neutral-400": $neutral-400,
+    "neutral-500": $neutral-500,
+    "neutral-600": $neutral-600,
+    "neutral-700": $neutral-700,
+    "neutral-800": $neutral-800,
+    "neutral-900": $neutral-900,
+    "neutral-950": $neutral-950,
+) !default;

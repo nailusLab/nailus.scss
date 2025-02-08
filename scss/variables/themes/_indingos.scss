@@ -1,0 +1,24 @@
+$indingo-50:  #eef2ff !default;
+$indingo-100: #e0e7ff !default;
+$indingo-200: #c7d2fe !default;
+$indingo-300: #a5b4fc !default;
+$indingo-400: #818cf8 !default;
+$indingo-500: #6366f1 !default;
+$indingo-600: #4f46e5 !default;
+$indingo-700: #4338ca !default;
+$indingo-800: #3730a3 !default;
+$indingo-900: #312e81 !default;
+$indingo-950: #1e1b4b !default;
+$indingos: (
+    "indingo-50": $indingo-50,
+    "indingo-100": $indingo-100,
+    "indingo-200": $indingo-200,
+    "indingo-300": $indingo-300,
+    "indingo-400": $indingo-400,
+    "indingo-500": $indingo-500,
+    "indingo-600": $indingo-600,
+    "indingo-700": $indingo-700,
+    "indingo-800": $indingo-800,
+    "indingo-900": $indingo-900,
+    "indingo-950": $indingo-950,
+) !default;
