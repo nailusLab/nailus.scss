@@ -2,6 +2,8 @@
 //
 @mixin bsBanner($file) {
     /*!
-     * 
+     * #{$name} #{$file} #{$version} #{$homepage}
+     * Copyright #{$copyright} #{$author}
+     * Licensed under MIT #{$licensed} 
      */
 }

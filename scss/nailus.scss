@@ -1,3 +1,6 @@
+// @import packages-configs
+@import "packages/nailus.configs";
+
 @import "mixins/banner";
 @include bsBanner("");
 
