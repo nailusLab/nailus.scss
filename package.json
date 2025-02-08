@@ -1,0 +1,30 @@
+{
+  "name": "nailus.scss",
+  "version": "1.0.0",
+  "description": "Laboratoire Front-end puissant, extensible et riche en fonctionnalités, pour créez des supers composants prédefinis, des classes utilitaires personnalisez avec SASS pour créer n'importe quelle conception directement dans votre balisage en donnons vie à vos projets avec des puissants plugins Javascript ou TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nailusLab/nailus.scss.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "utilily",
+    "components",
+    "mobile-first"
+  ],
+  "author": "NSOUNDA NSILULU Naïloth Esdras -> The nailusLab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nailusLab/nailus.scss/issues"
+  },
+  "homepage": "https://github.com/nailusLab/nailus.scss#readme"
+}
