@@ -1,0 +1,7 @@
+// Prefix for :root CSS variables
+
+$variable-prefixName: ns !default;
+
+$variable-prefix: #{$variable-prefixName}- !default;
+
+$prefix: --#{$variable-prefix} !default;

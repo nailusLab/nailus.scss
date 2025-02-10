@@ -1,2 +1,37 @@
 // nailus.scss variables
 //
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+// scss-docs-start color-variables
+@import "variables/themes/ambers";
+@import "variables/themes/blues";
+@import "variables/themes/cyans";
+@import "variables/themes/emeralds";
+@import "variables/themes/fushias";
+@import "variables/themes/grays";
+@import "variables/themes/greens";
+@import "variables/themes/indingos";
+@import "variables/themes/limes";
+@import "variables/themes/neutrals";
+@import "variables/themes/oranges";
+@import "variables/themes/pinks";
+@import "variables/themes/purples";
+@import "variables/themes/reds";
+@import "variables/themes/roses";
+@import "variables/themes/skys";
+@import "variables/themes/slates";
+@import "variables/themes/stones";
+@import "variables/themes/teals";
+@import "variables/themes/theme-colors";
+@import "variables/themes/violets";
+@import "variables/themes/yellows";
+@import "variables/themes/zincs";
+// scss-docs-end color-variables
+
+
+// scss-docs-start prefix-variable
+@import "variables/bases/prefix";
+// scss-docs-end prefix-variable

@@ -1,2 +1,98 @@
 // nailus.scss themes
 //
+
+@layer theme {
+    :root{
+        @each $key, $value in $ambers{
+            #{$prefix}#{$key}: #{$value};
+        }
+
+        @each $key, $value in $blues{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $cyans{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $emeralds{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $fushias{
+            #{$prefix}#{$key}: #{$value};
+        }
+
+        @each $key, $value in $grays{
+            #{$prefix}#{$key}: #{$value};
+        }
+
+        @each $key, $value in $greens{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $indingos{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $limes{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $neutrals{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $oranges{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $pinks{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $purples{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $reds{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $roses{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $skys{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $slates{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $stones{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $teals{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $theme-colors{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $violets{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $yellows{
+            #{$prefix}#{$key}: #{$value};
+        }
+        
+        @each $key, $value in $zincs{
+            #{$prefix}#{$key}: #{$value};
+        }
+    }
+}

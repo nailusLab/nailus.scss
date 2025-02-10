@@ -1,2 +1,25 @@
 // nailus.scss functions
 //
+// Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+
+// importing different function files
+
+// Ascending
+// Used to evaluate Sass maps like our grid breakpoints.
+@import "functions/func.ascendings";
+
+// Color
+// Used to evaluate Sass functions like tint-color, opaque, color-contrast, rgba-css-var and to-rgb
+@import "functions/func.colors";
+
+// maps
+// Used to evaluate Sass functions like map-loop, negativify-map, map-get-multiple andmap-merge-multiple.
+@import "functions/func.maps";
+
+// svg
+// Used to evaluate Sass functions like @str-replace() and @escape-svg().
+@import "functions/func.svgs";
+
+// calculs
+// Used to evaluate Sass functions like @add(), @subtract, @divided().
+@import "functions/func.calculs";
