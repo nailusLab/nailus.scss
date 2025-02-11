@@ -6,20 +6,20 @@
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
-@import "functions/func.ascendings";
+@import "func.ascendings";
 
 // Color
 // Used to evaluate Sass functions like tint-color, opaque, color-contrast, rgba-css-var and to-rgb
-@import "functions/func.colors";
+@import "func.colors";
 
 // maps
 // Used to evaluate Sass functions like map-loop, negativify-map, map-get-multiple andmap-merge-multiple.
-@import "functions/func.maps";
+@import "func.maps";
 
 // svg
 // Used to evaluate Sass functions like @str-replace() and @escape-svg().
-@import "functions/func.svgs";
+@import "func.svgs";
 
 // calculs
 // Used to evaluate Sass functions like @add(), @subtract, @divided().
-@import "functions/func.calculs";
+@import "func.calculs";

@@ -6,17 +6,16 @@
 
 // scss-docs-start import-stack
 // Configuration
-@import "functions";
-@import "variables";
-@import "variables-dark";
-@import "maps";
-@import "mixins";
+@import "functions/functions";
+@import "variables/variables";
+@import "maps/maps";
+@import "mixins/mixins";
 
 // @themes, @bases, @components, @utilities
-@import "themes";
-@import "bases";
-@import "components";
-@import "utilities";
+@import "themes/themes";
+@import "bases/bases";
+@import "components/components";
+@import "utilities/utilities";
 
 // Utilities
 @import "utilities/api";
