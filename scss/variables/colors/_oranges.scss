@@ -22,3 +22,5 @@ $oranges: (
     "orange-900": $orange-900,
     "orange-950": $orange-950,
 ) !default;
+
+$oranges-rgb: map-loop($oranges, to-rgb, "$value") !default;

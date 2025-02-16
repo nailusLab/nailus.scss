@@ -22,3 +22,5 @@ $cyans: (
     cyan-900: $cyan-900,
     cyan-950: $cyan-950,
 ) !default;
+
+$cyans-rgb: map-loop($cyans, to-rgb, "$value") !default;

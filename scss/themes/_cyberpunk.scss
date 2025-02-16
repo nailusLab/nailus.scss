@@ -1,0 +1,47 @@
+$cyberpunk-primary:   #09ecf3 !default;
+$cyberpunk-secondary: #966fb3 !default;
+$cyberpunk-success:   #16a34a !default;
+$cyberpunk-info:      #2563eb !default;
+$cyberpunk-warning:   #ff7568 !default;
+$cyberpunk-danger:    #ff0b04 !default;
+$cyberpunk-accent:    #ffe999 !default;
+$cyberpunk-neutral:   #3b8ac4 !default;
+$cyberpunk-base-100:  #345da7 !default;
+
+$cyberpunk-primary-content:   #005355 !default;
+$cyberpunk-secondary-content: #08040c !default;
+$cyberpunk-success-content:   #000a02 !default;
+$cyberpunk-info-content:      #d2e2ff !default;
+$cyberpunk-warning-content:   #110500 !default;
+$cyberpunk-danger-content:    #180403 !default;
+$cyberpunk-accent-content:    #161308 !default;
+$cyberpunk-neutral-content:   #01070e !default;
+
+$cyberpunk-base-content:      #d4deef !default;
+$cyberpunk-base-200-content:  #2e5497 !default;
+$cyberpunk-base-300-content:  #294b88 !default;
+
+$cyberpunk-color-scheme: "light" !default;
+$cyberpunks:(
+    "primary-content": $cyberpunk-primary-content,
+    "secondary-content": $cyberpunk-secondary-content,
+    "success-content": $cyberpunk-success-content,
+    "info-content": $cyberpunk-info-content,
+    "warning-content": $cyberpunk-warning-content,
+    "danger-content":  $cyberpunk-danger-content,
+    "accent-content":  $cyberpunk-accent-content,
+    "neutral-content":  $cyberpunk-neutral-content,
+    "base-content":  $cyberpunk-base-content,
+    "base-200-content":  $cyberpunk-base-200-content,
+    "base-300-content":  $cyberpunk-base-300-content,
+    "primary": $cyberpunk-primary,
+    "secondary": $cyberpunk-secondary,
+    "success": $cyberpunk-success,
+    "info": $cyberpunk-info,
+    "warning": $cyberpunk-warning,
+    "danger":  $cyberpunk-danger,
+    "accent":  $cyberpunk-accent,
+    "neutral":  $cyberpunk-neutral,
+);
+
+$cyberpunks-rgb: map-loop($cyberpunks, to-rgb, "$value") !default;

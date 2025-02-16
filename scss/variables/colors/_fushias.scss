@@ -22,3 +22,5 @@ $fushias: (
     fushia-900: $fushia-900,
     fushia-950: $fushia-950,
 ) !default;
+
+$fushias-rgb: map-loop($fushias, to-rgb, "$value") !default;

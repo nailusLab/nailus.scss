@@ -22,3 +22,5 @@ $indingos: (
     "indingo-900": $indingo-900,
     "indingo-950": $indingo-950,
 ) !default;
+
+$indingos-rgb: map-loop($indingos, to-rgb, "$value") !default;

@@ -1,2 +1,12 @@
 // nailus.scss mixins
 //
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+// Vendor
+@import "vendor/rfs";
+
+// Helpers
+@import "mixins/color-mode";
+@import "mixins/color-scheme";

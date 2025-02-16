@@ -22,3 +22,5 @@ $neutrals: (
     "neutral-900": $neutral-900,
     "neutral-950": $neutral-950,
 ) !default;
+
+$neutrals-rgb: map-loop($neutrals, to-rgb, "$value") !default;

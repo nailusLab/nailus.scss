@@ -1,0 +1,47 @@
+$light-primary:   #09ecf3 !default;
+$light-secondary: #966fb3 !default;
+$light-success:   #16a34a !default;
+$light-info:      #2563eb !default;
+$light-warning:   #ff7568 !default;
+$light-danger:    #ff0b04 !default;
+$light-accent:    #ffe999 !default;
+$light-neutral:   #3b8ac4 !default;
+$light-base-100:  #345da7 !default;
+
+$light-primary-content:   #005355 !default;
+$light-secondary-content: #08040c !default;
+$light-success-content:   #000a02 !default;
+$light-info-content:      #d2e2ff !default;
+$light-warning-content:   #110500 !default;
+$light-danger-content:    #180403 !default;
+$light-accent-content:    #161308 !default;
+$light-neutral-content:   #01070e !default;
+
+$light-base-content:      #d4deef !default;
+$light-base-200-content:  #2e5497 !default;
+$light-base-300-content:  #294b88 !default;
+
+$light-color-scheme: "light" !default;
+$lights:(
+    "primary-content": $light-primary-content,
+    "secondary-content": $light-secondary-content,
+    "success-content": $light-success-content,
+    "info-content": $light-info-content,
+    "warning-content": $light-warning-content,
+    "danger-content":  $light-danger-content,
+    "accent-content":  $light-accent-content,
+    "neutral-content":  $light-neutral-content,
+    "base-content":  $light-base-content,
+    "base-200-content":  $light-base-200-content,
+    "base-300-content":  $light-base-300-content,
+    "primary": $light-primary,
+    "secondary": $light-secondary,
+    "success": $light-success,
+    "info": $light-info,
+    "warning": $light-warning,
+    "danger":  $light-danger,
+    "accent":  $light-accent,
+    "neutral":  $light-neutral,
+);
+
+$lights-rgb: map-loop($lights, to-rgb, "$value") !default;

@@ -1,0 +1,138 @@
+// Prefix for :root CSS variables
+
+$variable-prefix: ns- !default;
+
+// prefix for :root
+$prefix: --#{$variable-prefix} !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer:      1 !default;
+$grid-spacer: 1 !default;
+// scss-docs-start spacer-variables-maps
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer * 1,
+  8: $spacer * 2,
+  12: $spacer * 3,
+  16: $spacer * 4,
+  24: $spacer * 6,
+  40: $spacer * 10,
+  96: $spacer * 24
+) !default;
+// scss-docs-end spacer-variables-maps
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoint-xs:       0 !default;
+$grid-breakpoint-sm:   576px !default;
+$grid-breakpoint-md:   768px !default;
+$grid-breakpoint-lg:   992px !default;
+$grid-breakpoint-xl:  1200px !default;
+$grid-breakpoint-xxl: 1400px !default;
+$grid-breakpoints: (
+    xs:  $grid-breakpoint-xs,
+    sm:  $grid-breakpoint-sm,
+    md:  $grid-breakpoint-md,
+    lg:  $grid-breakpoint-lg,
+    xl:  $grid-breakpoint-xl,
+    xxl: $grid-breakpoint-xxl,
+) !default;
+// scss-docs-start grid-breakpoints
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start grid-container-max-widths
+$grid-container-sm:   540px !default;
+$grid-container-md:   720px !default;
+$grid-container-lg:   960px !default;
+$grid-container-xl:  1140px !default;
+$grid-container-xxl: 1320px !default;
+$grid-container-max-widths: (
+    sm:  $grid-container-sm,
+    md:  $grid-container-md,
+    lg:  $grid-container-lg,
+    xl:  $grid-container-xl,
+    xxl: $grid-container-xxl,
+) !default;
+// scss-docs-end grid-container-max-widths
+
+@include _assert-ascending($grid-container-max-widths, "$grid-container-max-widths");
+
+// scss-docs-start grid-containers
+$container-3xs: 16rem !default;
+$container-2xs: 18rem !default;
+$container-xs:  20rem !default;
+$container-sm:  24rem !default;
+$container-md:  28rem !default;
+$container-lg:  32rem !default;
+$container-xl:  36rem !default;
+$container-2xl: 42rem !default;
+$container-3xl: 48rem !default;
+$container-4xl: 56rem !default;
+$container-5xl: 64rem !default;
+$container-6xl: 72rem !default;
+$container-7xl: 80rem !default;
+$grid-containers: (
+    3xs: $container-3xs,
+    2xs: $container-2xs,
+    xs: $container-xs,
+    sm: $container-sm,
+    md: $container-md,
+    lg: $container-lg,
+    xl: $container-xl,
+    2xl: $container-2xl,
+    3xl: $container-3xl,
+    4xl: $container-4xl,
+    5xl: $container-5xl,
+    6xl: $container-6xl,
+    7xl: $container-7xl,
+) !default;
+// scss-docs-end grid-containers
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-text-align: null !default;
+$body-color: $gray-900 !default;
+$body-bg: $white !default;
+
+$body-secondary-color: rgba($body-color, 0.75) !default;
+$body-secondary-bg: $gray-200 !default;
+
+$body-tertiary-color: rgba($body-color, 0.5) !default;
+$body-tertiary-bg: $gray-100 !default;
+
+$body-emphasis-color: $black !default;
+
+// Dark color mode variables
+//
+// Custom variables for the `[data-bs-theme="dark"]` theme. Use this as a starting point for your own custom color modes by creating a new theme-specific file like `_variables-dark.scss` and adding the variables you need.
+
+$body-color-dark:                   $gray-300 !default;
+// $body-bg-dark:                      $gray-900 !default;
+// $body-secondary-color-dark:         rgba($body-color-dark, .75) !default;
+// $body-secondary-bg-dark:            $gray-800 !default;
+// $body-tertiary-color-dark:          rgba($body-color-dark, .5) !default;
+// $body-tertiary-bg-dark:             mix($gray-800, $gray-900, 50%) !default;
+// $body-emphasis-color-dark:          $white !default;
+// $border-color-dark:                 $gray-700 !default;
+// $border-color-translucent-dark:     rgba($white, .15) !default;

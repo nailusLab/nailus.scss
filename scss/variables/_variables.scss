@@ -25,8 +25,18 @@
 @import "colors/slates";
 @import "colors/stones";
 @import "colors/teals";
-@import "colors/theme-colors";
 @import "colors/violets";
 @import "colors/yellows";
 @import "colors/zincs";
+@import "colors/default";
 // scss-docs-end color-variables
+
+// scss-docs-start base
+@import "bases/root";
+@import "bases/enables";
+// scss-docs-end base
+
+
+// scss-docs-start utilities
+@import "utilities/typography";
+// scss-docs-end utilities

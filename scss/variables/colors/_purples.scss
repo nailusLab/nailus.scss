@@ -22,3 +22,5 @@ $purples: (
     "purple-900": $purple-900,
     "purple-950": $purple-950,
 ) !default;
+
+$purples-rgb: map-loop($purples, to-rgb, "$value") !default;

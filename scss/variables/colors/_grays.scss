@@ -22,3 +22,5 @@ $grays: (
     "gray-900": $gray-900,
     "gray-950": $gray-950,
 ) !default;
+
+$grays-rgb: map-loop($grays, to-rgb, "$value") !default;

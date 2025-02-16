@@ -1,0 +1,47 @@
+$corporate-primary:   #09ecf3 !default;
+$corporate-secondary: #966fb3 !default;
+$corporate-success:   #16a34a !default;
+$corporate-info:      #2563eb !default;
+$corporate-warning:   #ff7568 !default;
+$corporate-danger:    #ff0b04 !default;
+$corporate-accent:    #ffe999 !default;
+$corporate-neutral:   #3b8ac4 !default;
+$corporate-base-100:  #345da7 !default;
+
+$corporate-primary-content:   #005355 !default;
+$corporate-secondary-content: #08040c !default;
+$corporate-success-content:   #000a02 !default;
+$corporate-info-content:      #d2e2ff !default;
+$corporate-warning-content:   #110500 !default;
+$corporate-danger-content:    #180403 !default;
+$corporate-accent-content:    #161308 !default;
+$corporate-neutral-content:   #01070e !default;
+
+$corporate-base-content:      #d4deef !default;
+$corporate-base-200-content:  #2e5497 !default;
+$corporate-base-300-content:  #294b88 !default;
+
+$corporate-color-scheme: "light" !default;
+$corporates:(
+    "primary-content": $corporate-primary-content,
+    "secondary-content": $corporate-secondary-content,
+    "success-content": $corporate-success-content,
+    "info-content": $corporate-info-content,
+    "warning-content": $corporate-warning-content,
+    "danger-content":  $corporate-danger-content,
+    "accent-content":  $corporate-accent-content,
+    "neutral-content":  $corporate-neutral-content,
+    "base-content":  $corporate-base-content,
+    "base-200-content":  $corporate-base-200-content,
+    "base-300-content":  $corporate-base-300-content,
+    "primary": $corporate-primary,
+    "secondary": $corporate-secondary,
+    "success": $corporate-success,
+    "info": $corporate-info,
+    "warning": $corporate-warning,
+    "danger":  $corporate-danger,
+    "accent":  $corporate-accent,
+    "neutral":  $corporate-neutral,
+);
+
+$corporates-rgb: map-loop($corporates, to-rgb, "$value") !default;

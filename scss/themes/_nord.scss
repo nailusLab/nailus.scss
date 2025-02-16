@@ -1,0 +1,47 @@
+$nord-primary:   #09ecf3 !default;
+$nord-secondary: #966fb3 !default;
+$nord-success:   #16a34a !default;
+$nord-info:      #2563eb !default;
+$nord-warning:   #ff7568 !default;
+$nord-danger:    #ff0b04 !default;
+$nord-accent:    #ffe999 !default;
+$nord-neutral:   #3b8ac4 !default;
+$nord-base-100:  #345da7 !default;
+
+$nord-primary-content:   #005355 !default;
+$nord-secondary-content: #08040c !default;
+$nord-success-content:   #000a02 !default;
+$nord-info-content:      #d2e2ff !default;
+$nord-warning-content:   #110500 !default;
+$nord-danger-content:    #180403 !default;
+$nord-accent-content:    #161308 !default;
+$nord-neutral-content:   #01070e !default;
+
+$nord-base-content:      #d4deef !default;
+$nord-base-200-content:  #2e5497 !default;
+$nord-base-300-content:  #294b88 !default;
+
+$nord-color-scheme: "light" !default;
+$nords:(
+    "primary-content": $nord-primary-content,
+    "secondary-content": $nord-secondary-content,
+    "success-content": $nord-success-content,
+    "info-content": $nord-info-content,
+    "warning-content": $nord-warning-content,
+    "danger-content":  $nord-danger-content,
+    "accent-content":  $nord-accent-content,
+    "neutral-content":  $nord-neutral-content,
+    "base-content":  $nord-base-content,
+    "base-200-content":  $nord-base-200-content,
+    "base-300-content":  $nord-base-300-content,
+    "primary": $nord-primary,
+    "secondary": $nord-secondary,
+    "success": $nord-success,
+    "info": $nord-info,
+    "warning": $nord-warning,
+    "danger":  $nord-danger,
+    "accent":  $nord-accent,
+    "neutral":  $nord-neutral,
+);
+
+$nords-rgb: map-loop($nords, to-rgb, "$value") !default;

@@ -1,0 +1,47 @@
+$emerald-primary:   #09ecf3 !default;
+$emerald-secondary: #966fb3 !default;
+$emerald-success:   #16a34a !default;
+$emerald-info:      #2563eb !default;
+$emerald-warning:   #ff7568 !default;
+$emerald-danger:    #ff0b04 !default;
+$emerald-accent:    #ffe999 !default;
+$emerald-neutral:   #3b8ac4 !default;
+$emerald-base-100:  #345da7 !default;
+
+$emerald-primary-content:   #005355 !default;
+$emerald-secondary-content: #08040c !default;
+$emerald-success-content:   #000a02 !default;
+$emerald-info-content:      #d2e2ff !default;
+$emerald-warning-content:   #110500 !default;
+$emerald-danger-content:    #180403 !default;
+$emerald-accent-content:    #161308 !default;
+$emerald-neutral-content:   #01070e !default;
+
+$emerald-base-content:      #d4deef !default;
+$emerald-base-200-content:  #2e5497 !default;
+$emerald-base-300-content:  #294b88 !default;
+
+$emerald-color-scheme: "light" !default;
+$emeralds:(
+    "primary-content": $emerald-primary-content,
+    "secondary-content": $emerald-secondary-content,
+    "success-content": $emerald-success-content,
+    "info-content": $emerald-info-content,
+    "warning-content": $emerald-warning-content,
+    "danger-content":  $emerald-danger-content,
+    "accent-content":  $emerald-accent-content,
+    "neutral-content":  $emerald-neutral-content,
+    "base-content":  $emerald-base-content,
+    "base-200-content":  $emerald-base-200-content,
+    "base-300-content":  $emerald-base-300-content,
+    "primary": $emerald-primary,
+    "secondary": $emerald-secondary,
+    "success": $emerald-success,
+    "info": $emerald-info,
+    "warning": $emerald-warning,
+    "danger":  $emerald-danger,
+    "accent":  $emerald-accent,
+    "neutral":  $emerald-neutral,
+);
+
+$emeralds-rgb: map-loop($emeralds, to-rgb, "$value") !default;

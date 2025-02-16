@@ -22,3 +22,5 @@ $stones: (
     "stone-900": $stone-900,
     "stone-950": $stone-950,
 ) !default;
+
+$stones-rgb: map-loop($stones, to-rgb, "$value") !default;

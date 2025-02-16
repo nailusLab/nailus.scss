@@ -22,3 +22,5 @@ $limes: (
     "lime-900": $lime-900,
     "lime-950": $lime-950,
 ) !default;
+
+$limes-rgb: map-loop($limes, to-rgb, "$value") !default;

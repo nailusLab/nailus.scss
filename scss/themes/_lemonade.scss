@@ -1,0 +1,47 @@
+$lemonade-primary:   #09ecf3 !default;
+$lemonade-secondary: #966fb3 !default;
+$lemonade-success:   #16a34a !default;
+$lemonade-info:      #2563eb !default;
+$lemonade-warning:   #ff7568 !default;
+$lemonade-danger:    #ff0b04 !default;
+$lemonade-accent:    #ffe999 !default;
+$lemonade-neutral:   #3b8ac4 !default;
+$lemonade-base-100:  #345da7 !default;
+
+$lemonade-primary-content:   #005355 !default;
+$lemonade-secondary-content: #08040c !default;
+$lemonade-success-content:   #000a02 !default;
+$lemonade-info-content:      #d2e2ff !default;
+$lemonade-warning-content:   #110500 !default;
+$lemonade-danger-content:    #180403 !default;
+$lemonade-accent-content:    #161308 !default;
+$lemonade-neutral-content:   #01070e !default;
+
+$lemonade-base-content:      #d4deef !default;
+$lemonade-base-200-content:  #2e5497 !default;
+$lemonade-base-300-content:  #294b88 !default;
+
+$lemonade-color-scheme: "light" !default;
+$lemonades:(
+    "primary-content": $lemonade-primary-content,
+    "secondary-content": $lemonade-secondary-content,
+    "success-content": $lemonade-success-content,
+    "info-content": $lemonade-info-content,
+    "warning-content": $lemonade-warning-content,
+    "danger-content":  $lemonade-danger-content,
+    "accent-content":  $lemonade-accent-content,
+    "neutral-content":  $lemonade-neutral-content,
+    "base-content":  $lemonade-base-content,
+    "base-200-content":  $lemonade-base-200-content,
+    "base-300-content":  $lemonade-base-300-content,
+    "primary": $lemonade-primary,
+    "secondary": $lemonade-secondary,
+    "success": $lemonade-success,
+    "info": $lemonade-info,
+    "warning": $lemonade-warning,
+    "danger":  $lemonade-danger,
+    "accent":  $lemonade-accent,
+    "neutral":  $lemonade-neutral,
+);
+
+$lemonades-rgb: map-loop($lemonades, to-rgb, "$value") !default;

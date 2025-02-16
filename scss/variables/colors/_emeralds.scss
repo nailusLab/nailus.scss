@@ -22,3 +22,5 @@ $emeralds: (
     emerald-900: $emerald-900,
     emerald-950: $emerald-950,
 ) !default;
+
+$emeralds-rgb: map-loop($emeralds, to-rgb, "$value") !default;

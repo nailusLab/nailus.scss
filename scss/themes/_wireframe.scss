@@ -1,0 +1,47 @@
+$wireframe-primary:   #b8b8b8 !default;
+$wireframe-secondary: #b8b8b8 !default;
+$wireframe-success:   #16a34a !default;
+$wireframe-info:      #2563eb !default;
+$wireframe-warning:   #ff7568 !default;
+$wireframe-danger:    #ff0b04 !default;
+$wireframe-accent:    #b8b8b8 !default;
+$wireframe-neutral:   #ebebeb !default;
+$wireframe-base-100:  #ffffff !default;
+
+$wireframe-primary-content:   #0c0c0c !default;
+$wireframe-secondary-content: #0c0c0c !default;
+$wireframe-success-content:   #008000 !default;
+$wireframe-info-content:      #0000ff !default;
+$wireframe-warning-content:   #a6a659 !default;
+$wireframe-danger-content:    #ff0000 !default;
+$wireframe-accent-content:    #0c0c0c !default;
+$wireframe-neutral-content:   #131313 !default;
+
+$wireframe-base-content:      #161616 !default;
+$wireframe-base-200-content:  #eeeeee !default;
+$wireframe-base-300-content:  #dddddd !default;
+
+$wireframe-color-scheme: "light" !default;
+$wireframes:(
+    "primary-content": $wireframe-primary-content,
+    "secondary-content": $wireframe-secondary-content,
+    "success-content": $wireframe-success-content,
+    "info-content": $wireframe-info-content,
+    "warning-content": $wireframe-warning-content,
+    "danger-content":  $wireframe-danger-content,
+    "accent-content":  $wireframe-accent-content,
+    "neutral-content":  $wireframe-neutral-content,
+    "base-content":  $wireframe-base-content,
+    "base-200-content":  $wireframe-base-200-content,
+    "base-300-content":  $wireframe-base-300-content,
+    "primary": $wireframe-primary,
+    "secondary": $wireframe-secondary,
+    "success": $wireframe-success,
+    "info": $wireframe-info,
+    "warning": $wireframe-warning,
+    "danger":  $wireframe-danger,
+    "accent":  $wireframe-accent,
+    "neutral":  $wireframe-neutral,
+);
+
+$wireframes-rgb: map-loop($wireframes, to-rgb, "$value") !default;

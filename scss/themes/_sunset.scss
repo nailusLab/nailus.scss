@@ -1,0 +1,47 @@
+$sunset-primary:   #09ecf3 !default;
+$sunset-secondary: #966fb3 !default;
+$sunset-success:   #16a34a !default;
+$sunset-info:      #2563eb !default;
+$sunset-warning:   #ff7568 !default;
+$sunset-danger:    #ff0b04 !default;
+$sunset-accent:    #ffe999 !default;
+$sunset-neutral:   #3b8ac4 !default;
+$sunset-base-100:  #345da7 !default;
+
+$sunset-primary-content:   #005355 !default;
+$sunset-secondary-content: #08040c !default;
+$sunset-success-content:   #000a02 !default;
+$sunset-info-content:      #d2e2ff !default;
+$sunset-warning-content:   #110500 !default;
+$sunset-danger-content:    #180403 !default;
+$sunset-accent-content:    #161308 !default;
+$sunset-neutral-content:   #01070e !default;
+
+$sunset-base-content:      #d4deef !default;
+$sunset-base-200-content:  #2e5497 !default;
+$sunset-base-300-content:  #294b88 !default;
+
+$sunset-color-scheme: "dark" !default;
+$sunsets:(
+    "primary-content": $sunset-primary-content,
+    "secondary-content": $sunset-secondary-content,
+    "success-content": $sunset-success-content,
+    "info-content": $sunset-info-content,
+    "warning-content": $sunset-warning-content,
+    "danger-content":  $sunset-danger-content,
+    "accent-content":  $sunset-accent-content,
+    "neutral-content":  $sunset-neutral-content,
+    "base-content":  $sunset-base-content,
+    "base-200-content":  $sunset-base-200-content,
+    "base-300-content":  $sunset-base-300-content,
+    "primary": $sunset-primary,
+    "secondary": $sunset-secondary,
+    "success": $sunset-success,
+    "info": $sunset-info,
+    "warning": $sunset-warning,
+    "danger":  $sunset-danger,
+    "accent":  $sunset-accent,
+    "neutral":  $sunset-neutral,
+);
+
+$sunsets-rgb: map-loop($sunsets, to-rgb, "$value") !default;

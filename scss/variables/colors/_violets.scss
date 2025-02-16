@@ -22,3 +22,5 @@ $violets: (
     "violet-900": $violet-900,
     "violet-950": $violet-950,
 ) !default;
+
+$violets-rgb: map-loop($violets, to-rgb, "$value") !default;

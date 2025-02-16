@@ -22,3 +22,5 @@ $teals: (
     "teal-900": $teal-900,
     "teal-950": $teal-950,
 ) !default;
+
+$teals-rgb: map-loop($teals, to-rgb, "$value") !default;

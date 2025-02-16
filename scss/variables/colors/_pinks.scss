@@ -22,3 +22,5 @@ $pinks: (
     "pink-900": $pink-900,
     "pink-950": $pink-950,
 ) !default;
+
+$pinks-rgb: map-loop($pinks, to-rgb, "$value") !default;

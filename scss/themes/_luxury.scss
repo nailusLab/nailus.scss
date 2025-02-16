@@ -1,0 +1,47 @@
+$luxury-primary:   #09ecf3 !default;
+$luxury-secondary: #966fb3 !default;
+$luxury-success:   #16a34a !default;
+$luxury-info:      #2563eb !default;
+$luxury-warning:   #ff7568 !default;
+$luxury-danger:    #ff0b04 !default;
+$luxury-accent:    #ffe999 !default;
+$luxury-neutral:   #3b8ac4 !default;
+$luxury-base-100:  #345da7 !default;
+
+$luxury-primary-content:   #005355 !default;
+$luxury-secondary-content: #08040c !default;
+$luxury-success-content:   #000a02 !default;
+$luxury-info-content:      #d2e2ff !default;
+$luxury-warning-content:   #110500 !default;
+$luxury-danger-content:    #180403 !default;
+$luxury-accent-content:    #161308 !default;
+$luxury-neutral-content:   #01070e !default;
+
+$luxury-base-content:      #d4deef !default;
+$luxury-base-200-content:  #2e5497 !default;
+$luxury-base-300-content:  #294b88 !default;
+
+$luxury-color-scheme: "dark" !default;
+$luxurys:(
+    "primary-content": $luxury-primary-content,
+    "secondary-content": $luxury-secondary-content,
+    "success-content": $luxury-success-content,
+    "info-content": $luxury-info-content,
+    "warning-content": $luxury-warning-content,
+    "danger-content":  $luxury-danger-content,
+    "accent-content":  $luxury-accent-content,
+    "neutral-content":  $luxury-neutral-content,
+    "base-content":  $luxury-base-content,
+    "base-200-content":  $luxury-base-200-content,
+    "base-300-content":  $luxury-base-300-content,
+    "primary": $luxury-primary,
+    "secondary": $luxury-secondary,
+    "success": $luxury-success,
+    "info": $luxury-info,
+    "warning": $luxury-warning,
+    "danger":  $luxury-danger,
+    "accent":  $luxury-accent,
+    "neutral":  $luxury-neutral,
+);
+
+$luxurys-rgb: map-loop($luxurys, to-rgb, "$value") !default;

@@ -1,0 +1,47 @@
+$garden-primary:   #09ecf3 !default;
+$garden-secondary: #966fb3 !default;
+$garden-success:   #16a34a !default;
+$garden-info:      #2563eb !default;
+$garden-warning:   #ff7568 !default;
+$garden-danger:    #ff0b04 !default;
+$garden-accent:    #ffe999 !default;
+$garden-neutral:   #3b8ac4 !default;
+$garden-base-100:  #345da7 !default;
+
+$garden-primary-content:   #005355 !default;
+$garden-secondary-content: #08040c !default;
+$garden-success-content:   #000a02 !default;
+$garden-info-content:      #d2e2ff !default;
+$garden-warning-content:   #110500 !default;
+$garden-danger-content:    #180403 !default;
+$garden-accent-content:    #161308 !default;
+$garden-neutral-content:   #01070e !default;
+
+$garden-base-content:      #d4deef !default;
+$garden-base-200-content:  #2e5497 !default;
+$garden-base-300-content:  #294b88 !default;
+
+$garden-color-scheme: "light" !default;
+$gardens:(
+    "primary-content": $garden-primary-content,
+    "secondary-content": $garden-secondary-content,
+    "success-content": $garden-success-content,
+    "info-content": $garden-info-content,
+    "warning-content": $garden-warning-content,
+    "danger-content":  $garden-danger-content,
+    "accent-content":  $garden-accent-content,
+    "neutral-content":  $garden-neutral-content,
+    "base-content":  $garden-base-content,
+    "base-200-content":  $garden-base-200-content,
+    "base-300-content":  $garden-base-300-content,
+    "primary": $garden-primary,
+    "secondary": $garden-secondary,
+    "success": $garden-success,
+    "info": $garden-info,
+    "warning": $garden-warning,
+    "danger":  $garden-danger,
+    "accent":  $garden-accent,
+    "neutral":  $garden-neutral,
+);
+
+$gardens-rgb: map-loop($gardens, to-rgb, "$value") !default;

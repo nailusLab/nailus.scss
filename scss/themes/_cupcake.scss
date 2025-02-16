@@ -1,0 +1,47 @@
+$cupcake-primary:   #09ecf3 !default;
+$cupcake-secondary: #966fb3 !default;
+$cupcake-success:   #16a34a !default;
+$cupcake-info:      #2563eb !default;
+$cupcake-warning:   #ff7568 !default;
+$cupcake-danger:    #ff0b04 !default;
+$cupcake-accent:    #ffe999 !default;
+$cupcake-neutral:   #3b8ac4 !default;
+$cupcake-base-100:  #345da7 !default;
+
+$cupcake-primary-content:   #005355 !default;
+$cupcake-secondary-content: #08040c !default;
+$cupcake-success-content:   #000a02 !default;
+$cupcake-info-content:      #d2e2ff !default;
+$cupcake-warning-content:   #110500 !default;
+$cupcake-danger-content:    #180403 !default;
+$cupcake-accent-content:    #161308 !default;
+$cupcake-neutral-content:   #01070e !default;
+
+$cupcake-base-content:      #d4deef !default;
+$cupcake-base-200-content:  #2e5497 !default;
+$cupcake-base-300-content:  #294b88 !default;
+
+$cupcake-color-scheme: "light" !default;
+$cupcakes:(
+    "primary-content": $cupcake-primary-content,
+    "secondary-content": $cupcake-secondary-content,
+    "success-content": $cupcake-success-content,
+    "info-content": $cupcake-info-content,
+    "warning-content": $cupcake-warning-content,
+    "danger-content":  $cupcake-danger-content,
+    "accent-content":  $cupcake-accent-content,
+    "neutral-content":  $cupcake-neutral-content,
+    "base-content":  $cupcake-base-content,
+    "base-200-content":  $cupcake-base-200-content,
+    "base-300-content":  $cupcake-base-300-content,
+    "primary": $cupcake-primary,
+    "secondary": $cupcake-secondary,
+    "success": $cupcake-success,
+    "info": $cupcake-info,
+    "warning": $cupcake-warning,
+    "danger":  $cupcake-danger,
+    "accent":  $cupcake-accent,
+    "neutral":  $cupcake-neutral,
+);
+
+$cupcakes-rgb: map-loop($cupcakes, to-rgb, "$value") !default;

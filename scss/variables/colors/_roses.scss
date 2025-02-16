@@ -22,3 +22,5 @@ $roses: (
     "rose-900": $rose-900,
     "rose-950": $rose-950,
 ) !default;
+
+$roses-rgb: map-loop($roses, to-rgb, "$value") !default;

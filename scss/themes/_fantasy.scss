@@ -1,0 +1,47 @@
+$fantasy-primary:   #09ecf3 !default;
+$fantasy-secondary: #966fb3 !default;
+$fantasy-success:   #16a34a !default;
+$fantasy-info:      #2563eb !default;
+$fantasy-warning:   #ff7568 !default;
+$fantasy-danger:    #ff0b04 !default;
+$fantasy-accent:    #ffe999 !default;
+$fantasy-neutral:   #3b8ac4 !default;
+$fantasy-base-100:  #345da7 !default;
+
+$fantasy-primary-content:   #005355 !default;
+$fantasy-secondary-content: #08040c !default;
+$fantasy-success-content:   #000a02 !default;
+$fantasy-info-content:      #d2e2ff !default;
+$fantasy-warning-content:   #110500 !default;
+$fantasy-danger-content:    #180403 !default;
+$fantasy-accent-content:    #161308 !default;
+$fantasy-neutral-content:   #01070e !default;
+
+$fantasy-base-content:      #d4deef !default;
+$fantasy-base-200-content:  #2e5497 !default;
+$fantasy-base-300-content:  #294b88 !default;
+
+$fantasy-color-scheme: "light" !default;
+$fantasys:(
+    "primary-content": $fantasy-primary-content,
+    "secondary-content": $fantasy-secondary-content,
+    "success-content": $fantasy-success-content,
+    "info-content": $fantasy-info-content,
+    "warning-content": $fantasy-warning-content,
+    "danger-content":  $fantasy-danger-content,
+    "accent-content":  $fantasy-accent-content,
+    "neutral-content":  $fantasy-neutral-content,
+    "base-content":  $fantasy-base-content,
+    "base-200-content":  $fantasy-base-200-content,
+    "base-300-content":  $fantasy-base-300-content,
+    "primary": $fantasy-primary,
+    "secondary": $fantasy-secondary,
+    "success": $fantasy-success,
+    "info": $fantasy-info,
+    "warning": $fantasy-warning,
+    "danger":  $fantasy-danger,
+    "accent":  $fantasy-accent,
+    "neutral":  $fantasy-neutral,
+);
+
+$fantasys-rgb: map-loop($fantasys, to-rgb, "$value") !default;

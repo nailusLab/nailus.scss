@@ -1,0 +1,47 @@
+$valentine-primary:   #09ecf3 !default;
+$valentine-secondary: #966fb3 !default;
+$valentine-success:   #16a34a !default;
+$valentine-info:      #2563eb !default;
+$valentine-warning:   #ff7568 !default;
+$valentine-danger:    #ff0b04 !default;
+$valentine-accent:    #ffe999 !default;
+$valentine-neutral:   #3b8ac4 !default;
+$valentine-base-100:  #345da7 !default;
+
+$valentine-primary-content:   #005355 !default;
+$valentine-secondary-content: #08040c !default;
+$valentine-success-content:   #000a02 !default;
+$valentine-info-content:      #d2e2ff !default;
+$valentine-warning-content:   #110500 !default;
+$valentine-danger-content:    #180403 !default;
+$valentine-accent-content:    #161308 !default;
+$valentine-neutral-content:   #01070e !default;
+
+$valentine-base-content:      #d4deef !default;
+$valentine-base-200-content:  #2e5497 !default;
+$valentine-base-300-content:  #294b88 !default;
+
+$valentine-color-scheme: "light" !default;
+$valentines:(
+    "primary-content": $valentine-primary-content,
+    "secondary-content": $valentine-secondary-content,
+    "success-content": $valentine-success-content,
+    "info-content": $valentine-info-content,
+    "warning-content": $valentine-warning-content,
+    "danger-content":  $valentine-danger-content,
+    "accent-content":  $valentine-accent-content,
+    "neutral-content":  $valentine-neutral-content,
+    "base-content":  $valentine-base-content,
+    "base-200-content":  $valentine-base-200-content,
+    "base-300-content":  $valentine-base-300-content,
+    "primary": $valentine-primary,
+    "secondary": $valentine-secondary,
+    "success": $valentine-success,
+    "info": $valentine-info,
+    "warning": $valentine-warning,
+    "danger":  $valentine-danger,
+    "accent":  $valentine-accent,
+    "neutral":  $valentine-neutral,
+);
+
+$valentines-rgb: map-loop($valentines, to-rgb, "$value") !default;

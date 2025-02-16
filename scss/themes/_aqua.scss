@@ -1,0 +1,47 @@
+$aqua-primary:   #09ecf3 !default;
+$aqua-secondary: #966fb3 !default;
+$aqua-success:   #16a34a !default;
+$aqua-info:      #2563eb !default;
+$aqua-warning:   #ff7568 !default;
+$aqua-danger:    #ff0b04 !default;
+$aqua-accent:    #ffe999 !default;
+$aqua-neutral:   #3b8ac4 !default;
+$aqua-base-100:  #345da7 !default;
+
+$aqua-primary-content:   #005355 !default;
+$aqua-secondary-content: #08040c !default;
+$aqua-success-content:   #000a02 !default;
+$aqua-info-content:      #d2e2ff !default;
+$aqua-warning-content:   #110500 !default;
+$aqua-danger-content:    #180403 !default;
+$aqua-accent-content:    #161308 !default;
+$aqua-neutral-content:   #01070e !default;
+
+$aqua-base-content:      #d4deef !default;
+$aqua-base-200-content:  #2e5497 !default;
+$aqua-base-300-content:  #294b88 !default;
+
+$aqua-color-scheme: "dark" !default;
+$aquas:(
+    "primary-content": $aqua-primary-content,
+    "secondary-content": $aqua-secondary-content,
+    "success-content": $aqua-success-content,
+    "info-content": $aqua-info-content,
+    "warning-content": $aqua-warning-content,
+    "danger-content":  $aqua-danger-content,
+    "accent-content":  $aqua-accent-content,
+    "neutral-content":  $aqua-neutral-content,
+    "base-content":  $aqua-base-content,
+    "base-200-content":  $aqua-base-200-content,
+    "base-300-content":  $aqua-base-300-content,
+    "primary": $aqua-primary,
+    "secondary": $aqua-secondary,
+    "success": $aqua-success,
+    "info": $aqua-info,
+    "warning": $aqua-warning,
+    "danger":  $aqua-danger,
+    "accent":  $aqua-accent,
+    "neutral":  $aqua-neutral,
+);
+
+$aquas-rgb: map-loop($aquas, to-rgb, "$value") !default;

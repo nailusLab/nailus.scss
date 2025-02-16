@@ -22,3 +22,5 @@ $reds: (
     "red-900": $red-900,
     "red-950": $red-950,
 ) !default;
+
+$reds-rgb: map-loop($reds, to-rgb, "$value") !default;

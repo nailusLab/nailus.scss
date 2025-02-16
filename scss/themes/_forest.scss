@@ -1,0 +1,47 @@
+$forest-primary:   #09ecf3 !default;
+$forest-secondary: #966fb3 !default;
+$forest-success:   #16a34a !default;
+$forest-info:      #2563eb !default;
+$forest-warning:   #ff7568 !default;
+$forest-danger:    #ff0b04 !default;
+$forest-accent:    #ffe999 !default;
+$forest-neutral:   #3b8ac4 !default;
+$forest-base-100:  #345da7 !default;
+
+$forest-primary-content:   #005355 !default;
+$forest-secondary-content: #08040c !default;
+$forest-success-content:   #000a02 !default;
+$forest-info-content:      #d2e2ff !default;
+$forest-warning-content:   #110500 !default;
+$forest-danger-content:    #180403 !default;
+$forest-accent-content:    #161308 !default;
+$forest-neutral-content:   #01070e !default;
+
+$forest-base-content:      #d4deef !default;
+$forest-base-200-content:  #2e5497 !default;
+$forest-base-300-content:  #294b88 !default;
+
+$forest-color-scheme: "dark" !default;
+$forests:(
+    "primary-content": $forest-primary-content,
+    "secondary-content": $forest-secondary-content,
+    "success-content": $forest-success-content,
+    "info-content": $forest-info-content,
+    "warning-content": $forest-warning-content,
+    "danger-content":  $forest-danger-content,
+    "accent-content":  $forest-accent-content,
+    "neutral-content":  $forest-neutral-content,
+    "base-content":  $forest-base-content,
+    "base-200-content":  $forest-base-200-content,
+    "base-300-content":  $forest-base-300-content,
+    "primary": $forest-primary,
+    "secondary": $forest-secondary,
+    "success": $forest-success,
+    "info": $forest-info,
+    "warning": $forest-warning,
+    "danger":  $forest-danger,
+    "accent":  $forest-accent,
+    "neutral":  $forest-neutral,
+);
+
+$forests-rgb: map-loop($forests, to-rgb, "$value") !default;

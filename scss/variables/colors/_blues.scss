@@ -22,3 +22,5 @@ $blues: (
     blue-900: $blue-900,
     blue-950: $blue-950,
 ) !default;
+
+$blues-rgb: map-loop($blues, to-rgb, "$value") !default;

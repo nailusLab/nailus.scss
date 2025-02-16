@@ -1,0 +1,47 @@
+$cmyk-primary:   #09ecf3 !default;
+$cmyk-secondary: #966fb3 !default;
+$cmyk-success:   #16a34a !default;
+$cmyk-info:      #2563eb !default;
+$cmyk-warning:   #ff7568 !default;
+$cmyk-danger:    #ff0b04 !default;
+$cmyk-accent:    #ffe999 !default;
+$cmyk-neutral:   #3b8ac4 !default;
+$cmyk-base-100:  #345da7 !default;
+
+$cmyk-primary-content:   #005355 !default;
+$cmyk-secondary-content: #08040c !default;
+$cmyk-success-content:   #000a02 !default;
+$cmyk-info-content:      #d2e2ff !default;
+$cmyk-warning-content:   #110500 !default;
+$cmyk-danger-content:    #180403 !default;
+$cmyk-accent-content:    #161308 !default;
+$cmyk-neutral-content:   #01070e !default;
+
+$cmyk-base-content:      #d4deef !default;
+$cmyk-base-200-content:  #2e5497 !default;
+$cmyk-base-300-content:  #294b88 !default;
+
+$cmyk-color-scheme: "light" !default;
+$cmyks:(
+    "primary-content": $cmyk-primary-content,
+    "secondary-content": $cmyk-secondary-content,
+    "success-content": $cmyk-success-content,
+    "info-content": $cmyk-info-content,
+    "warning-content": $cmyk-warning-content,
+    "danger-content":  $cmyk-danger-content,
+    "accent-content":  $cmyk-accent-content,
+    "neutral-content":  $cmyk-neutral-content,
+    "base-content":  $cmyk-base-content,
+    "base-200-content":  $cmyk-base-200-content,
+    "base-300-content":  $cmyk-base-300-content,
+    "primary": $cmyk-primary,
+    "secondary": $cmyk-secondary,
+    "success": $cmyk-success,
+    "info": $cmyk-info,
+    "warning": $cmyk-warning,
+    "danger":  $cmyk-danger,
+    "accent":  $cmyk-accent,
+    "neutral":  $cmyk-neutral,
+);
+
+$cmyks-rgb: map-loop($cmyks, to-rgb, "$value") !default;

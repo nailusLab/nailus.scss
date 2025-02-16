@@ -1,0 +1,47 @@
+$halloween-primary:   #09ecf3 !default;
+$halloween-secondary: #966fb3 !default;
+$halloween-success:   #16a34a !default;
+$halloween-info:      #2563eb !default;
+$halloween-warning:   #ff7568 !default;
+$halloween-danger:    #ff0b04 !default;
+$halloween-accent:    #ffe999 !default;
+$halloween-neutral:   #3b8ac4 !default;
+$halloween-base-100:  #345da7 !default;
+
+$halloween-primary-content:   #005355 !default;
+$halloween-secondary-content: #08040c !default;
+$halloween-success-content:   #000a02 !default;
+$halloween-info-content:      #d2e2ff !default;
+$halloween-warning-content:   #110500 !default;
+$halloween-danger-content:    #180403 !default;
+$halloween-accent-content:    #161308 !default;
+$halloween-neutral-content:   #01070e !default;
+
+$halloween-base-content:      #d4deef !default;
+$halloween-base-200-content:  #2e5497 !default;
+$halloween-base-300-content:  #294b88 !default;
+
+$halloween-color-scheme: "dark" !default;
+$halloweens:(
+    "primary-content": $halloween-primary-content,
+    "secondary-content": $halloween-secondary-content,
+    "success-content": $halloween-success-content,
+    "info-content": $halloween-info-content,
+    "warning-content": $halloween-warning-content,
+    "danger-content":  $halloween-danger-content,
+    "accent-content":  $halloween-accent-content,
+    "neutral-content":  $halloween-neutral-content,
+    "base-content":  $halloween-base-content,
+    "base-200-content":  $halloween-base-200-content,
+    "base-300-content":  $halloween-base-300-content,
+    "primary": $halloween-primary,
+    "secondary": $halloween-secondary,
+    "success": $halloween-success,
+    "info": $halloween-info,
+    "warning": $halloween-warning,
+    "danger":  $halloween-danger,
+    "accent":  $halloween-accent,
+    "neutral":  $halloween-neutral,
+);
+
+$halloweens-rgb: map-loop($halloweens, to-rgb, "$value") !default;

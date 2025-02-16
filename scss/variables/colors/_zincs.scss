@@ -22,3 +22,5 @@ $zincs: (
     "zinc-900": $zinc-900,
     "zinc-950": $zinc-950,
 ) !default;
+
+$zincs-rgb: map-loop($zincs, to-rgb, "$value") !default;

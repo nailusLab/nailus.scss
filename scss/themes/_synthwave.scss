@@ -1,0 +1,47 @@
+$synthwave-primary:   #09ecf3 !default;
+$synthwave-secondary: #966fb3 !default;
+$synthwave-success:   #16a34a !default;
+$synthwave-info:      #2563eb !default;
+$synthwave-warning:   #ff7568 !default;
+$synthwave-danger:    #ff0b04 !default;
+$synthwave-accent:    #ffe999 !default;
+$synthwave-neutral:   #3b8ac4 !default;
+$synthwave-base-100:  #345da7 !default;
+
+$synthwave-primary-content:   #005355 !default;
+$synthwave-secondary-content: #08040c !default;
+$synthwave-success-content:   #000a02 !default;
+$synthwave-info-content:      #d2e2ff !default;
+$synthwave-warning-content:   #110500 !default;
+$synthwave-danger-content:    #180403 !default;
+$synthwave-accent-content:    #161308 !default;
+$synthwave-neutral-content:   #01070e !default;
+
+$synthwave-base-content:      #d4deef !default;
+$synthwave-base-200-content:  #2e5497 !default;
+$synthwave-base-300-content:  #294b88 !default;
+
+$synthwave-color-scheme: "dark" !default;
+$synthwaves:(
+    "primary-content": $synthwave-primary-content,
+    "secondary-content": $synthwave-secondary-content,
+    "success-content": $synthwave-success-content,
+    "info-content": $synthwave-info-content,
+    "warning-content": $synthwave-warning-content,
+    "danger-content":  $synthwave-danger-content,
+    "accent-content":  $synthwave-accent-content,
+    "neutral-content":  $synthwave-neutral-content,
+    "base-content":  $synthwave-base-content,
+    "base-200-content":  $synthwave-base-200-content,
+    "base-300-content":  $synthwave-base-300-content,
+    "primary": $synthwave-primary,
+    "secondary": $synthwave-secondary,
+    "success": $synthwave-success,
+    "info": $synthwave-info,
+    "warning": $synthwave-warning,
+    "danger":  $synthwave-danger,
+    "accent":  $synthwave-accent,
+    "neutral":  $synthwave-neutral,
+);
+
+$synthwaves-rgb: map-loop($synthwaves, to-rgb, "$value") !default;

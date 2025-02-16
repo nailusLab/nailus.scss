@@ -1,0 +1,47 @@
+$coffee-primary:   #09ecf3 !default;
+$coffee-secondary: #966fb3 !default;
+$coffee-success:   #16a34a !default;
+$coffee-info:      #2563eb !default;
+$coffee-warning:   #ff7568 !default;
+$coffee-danger:    #ff0b04 !default;
+$coffee-accent:    #ffe999 !default;
+$coffee-neutral:   #3b8ac4 !default;
+$coffee-base-100:  #345da7 !default;
+
+$coffee-primary-content:   #005355 !default;
+$coffee-secondary-content: #08040c !default;
+$coffee-success-content:   #000a02 !default;
+$coffee-info-content:      #d2e2ff !default;
+$coffee-warning-content:   #110500 !default;
+$coffee-danger-content:    #180403 !default;
+$coffee-accent-content:    #161308 !default;
+$coffee-neutral-content:   #01070e !default;
+
+$coffee-base-content:      #d4deef !default;
+$coffee-base-200-content:  #2e5497 !default;
+$coffee-base-300-content:  #294b88 !default;
+
+$coffee-color-scheme: "dark" !default;
+$coffees:(
+    "primary-content": $coffee-primary-content,
+    "secondary-content": $coffee-secondary-content,
+    "success-content": $coffee-success-content,
+    "info-content": $coffee-info-content,
+    "warning-content": $coffee-warning-content,
+    "danger-content":  $coffee-danger-content,
+    "accent-content":  $coffee-accent-content,
+    "neutral-content":  $coffee-neutral-content,
+    "base-content":  $coffee-base-content,
+    "base-200-content":  $coffee-base-200-content,
+    "base-300-content":  $coffee-base-300-content,
+    "primary": $coffee-primary,
+    "secondary": $coffee-secondary,
+    "success": $coffee-success,
+    "info": $coffee-info,
+    "warning": $coffee-warning,
+    "danger":  $coffee-danger,
+    "accent":  $coffee-accent,
+    "neutral":  $coffee-neutral,
+);
+
+$coffees-rgb: map-loop($coffees, to-rgb, "$value") !default;

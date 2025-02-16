@@ -1,0 +1,47 @@
+$lofi-primary:   #09ecf3 !default;
+$lofi-secondary: #966fb3 !default;
+$lofi-success:   #16a34a !default;
+$lofi-info:      #2563eb !default;
+$lofi-warning:   #ff7568 !default;
+$lofi-danger:    #ff0b04 !default;
+$lofi-accent:    #ffe999 !default;
+$lofi-neutral:   #3b8ac4 !default;
+$lofi-base-100:  #345da7 !default;
+
+$lofi-primary-content:   #005355 !default;
+$lofi-secondary-content: #08040c !default;
+$lofi-success-content:   #000a02 !default;
+$lofi-info-content:      #d2e2ff !default;
+$lofi-warning-content:   #110500 !default;
+$lofi-danger-content:    #180403 !default;
+$lofi-accent-content:    #161308 !default;
+$lofi-neutral-content:   #01070e !default;
+
+$lofi-base-content:      #d4deef !default;
+$lofi-base-200-content:  #2e5497 !default;
+$lofi-base-300-content:  #294b88 !default;
+
+$lofi-color-scheme: "light" !default;
+$lofis:(
+    "primary-content": $lofi-primary-content,
+    "secondary-content": $lofi-secondary-content,
+    "success-content": $lofi-success-content,
+    "info-content": $lofi-info-content,
+    "warning-content": $lofi-warning-content,
+    "danger-content":  $lofi-danger-content,
+    "accent-content":  $lofi-accent-content,
+    "neutral-content":  $lofi-neutral-content,
+    "base-content":  $lofi-base-content,
+    "base-200-content":  $lofi-base-200-content,
+    "base-300-content":  $lofi-base-300-content,
+    "primary": $lofi-primary,
+    "secondary": $lofi-secondary,
+    "success": $lofi-success,
+    "info": $lofi-info,
+    "warning": $lofi-warning,
+    "danger":  $lofi-danger,
+    "accent":  $lofi-accent,
+    "neutral":  $lofi-neutral,
+);
+
+$lofis-rgb: map-loop($lofis, to-rgb, "$value") !default;

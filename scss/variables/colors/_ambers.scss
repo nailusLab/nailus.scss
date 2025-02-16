@@ -22,3 +22,5 @@ $ambers: (
     amber-900: $amber-900,
     amber-950: $amber-950,
 ) !default;
+
+$ambers-rgb: map-loop($ambers, to-rgb, "$value") !default;

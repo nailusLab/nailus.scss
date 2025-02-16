@@ -1,0 +1,47 @@
+$retro-primary:   #09ecf3 !default;
+$retro-secondary: #966fb3 !default;
+$retro-success:   #16a34a !default;
+$retro-info:      #2563eb !default;
+$retro-warning:   #ff7568 !default;
+$retro-danger:    #ff0b04 !default;
+$retro-accent:    #ffe999 !default;
+$retro-neutral:   #3b8ac4 !default;
+$retro-base-100:  #345da7 !default;
+
+$retro-primary-content:   #005355 !default;
+$retro-secondary-content: #08040c !default;
+$retro-success-content:   #000a02 !default;
+$retro-info-content:      #d2e2ff !default;
+$retro-warning-content:   #110500 !default;
+$retro-danger-content:    #180403 !default;
+$retro-accent-content:    #161308 !default;
+$retro-neutral-content:   #01070e !default;
+
+$retro-base-content:      #d4deef !default;
+$retro-base-200-content:  #2e5497 !default;
+$retro-base-300-content:  #294b88 !default;
+
+$retro-color-scheme: "light" !default;
+$retros:(
+    "primary-content": $retro-primary-content,
+    "secondary-content": $retro-secondary-content,
+    "success-content": $retro-success-content,
+    "info-content": $retro-info-content,
+    "warning-content": $retro-warning-content,
+    "danger-content":  $retro-danger-content,
+    "accent-content":  $retro-accent-content,
+    "neutral-content":  $retro-neutral-content,
+    "base-content":  $retro-base-content,
+    "base-200-content":  $retro-base-200-content,
+    "base-300-content":  $retro-base-300-content,
+    "primary": $retro-primary,
+    "secondary": $retro-secondary,
+    "success": $retro-success,
+    "info": $retro-info,
+    "warning": $retro-warning,
+    "danger":  $retro-danger,
+    "accent":  $retro-accent,
+    "neutral":  $retro-neutral,
+);
+
+$retros-rgb: map-loop($retros, to-rgb, "$value") !default;

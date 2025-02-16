@@ -1,0 +1,47 @@
+$dim-primary:   #09ecf3 !default;
+$dim-secondary: #966fb3 !default;
+$dim-success:   #16a34a !default;
+$dim-info:      #2563eb !default;
+$dim-warning:   #ff7568 !default;
+$dim-danger:    #ff0b04 !default;
+$dim-accent:    #ffe999 !default;
+$dim-neutral:   #3b8ac4 !default;
+$dim-base-100:  #345da7 !default;
+
+$dim-primary-content:   #005355 !default;
+$dim-secondary-content: #08040c !default;
+$dim-success-content:   #000a02 !default;
+$dim-info-content:      #d2e2ff !default;
+$dim-warning-content:   #110500 !default;
+$dim-danger-content:    #180403 !default;
+$dim-accent-content:    #161308 !default;
+$dim-neutral-content:   #01070e !default;
+
+$dim-base-content:      #d4deef !default;
+$dim-base-200-content:  #2e5497 !default;
+$dim-base-300-content:  #294b88 !default;
+
+$dim-color-scheme: "dark" !default;
+$dims:(
+    "primary-content": $dim-primary-content,
+    "secondary-content": $dim-secondary-content,
+    "success-content": $dim-success-content,
+    "info-content": $dim-info-content,
+    "warning-content": $dim-warning-content,
+    "danger-content":  $dim-danger-content,
+    "accent-content":  $dim-accent-content,
+    "neutral-content":  $dim-neutral-content,
+    "base-content":  $dim-base-content,
+    "base-200-content":  $dim-base-200-content,
+    "base-300-content":  $dim-base-300-content,
+    "primary": $dim-primary,
+    "secondary": $dim-secondary,
+    "success": $dim-success,
+    "info": $dim-info,
+    "warning": $dim-warning,
+    "danger":  $dim-danger,
+    "accent":  $dim-accent,
+    "neutral":  $dim-neutral,
+);
+
+$dims-rgb: map-loop($dims, to-rgb, "$value") !default;

@@ -1,0 +1,12 @@
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-light-mode: true !default;
+$enable-dark-mode:  true !default;
+
+$enable-theme-acid: true !default;
+$enable-theme-aqua: true !default;
+
+$enable-theme-wireframe: true !default;
+
+$color-mode-type:   data !default; // `data` or `media-query`

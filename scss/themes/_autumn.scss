@@ -1,0 +1,47 @@
+$autumn-primary:   #09ecf3 !default;
+$autumn-secondary: #966fb3 !default;
+$autumn-success:   #16a34a !default;
+$autumn-info:      #2563eb !default;
+$autumn-warning:   #ff7568 !default;
+$autumn-danger:    #ff0b04 !default;
+$autumn-accent:    #ffe999 !default;
+$autumn-neutral:   #3b8ac4 !default;
+$autumn-base-100:  #345da7 !default;
+
+$autumn-primary-content:   #edd0d0 !default;
+$autumn-secondary-content: #110202 !default;
+$autumn-success-content:   #020806 !default;
+$autumn-info-content:      #010b0d !default;
+$autumn-warning-content:   #130600 !default;
+$autumn-danger-content:    #ffd4d1 !default;
+$autumn-accent-content:    #100904 !default;
+$autumn-neutral-content:   #e5e0dc !default;
+
+$autumn-base-content:      #141414 !default;
+$autumn-base-200-content:  #dbdbdb !default;
+$autumn-base-300-content:  #c5c5c5 !default;
+
+$autumn-color-scheme: "light" !default;
+$autumns:(
+    "primary-content": $autumn-primary-content,
+    "secondary-content": $autumn-secondary-content,
+    "success-content": $autumn-success-content,
+    "info-content": $autumn-info-content,
+    "warning-content": $autumn-warning-content,
+    "danger-content":  $autumn-danger-content,
+    "accent-content":  $autumn-accent-content,
+    "neutral-content":  $autumn-neutral-content,
+    "base-content":  $autumn-base-content,
+    "base-200-content":  $autumn-base-200-content,
+    "base-300-content":  $autumn-base-300-content,
+    "primary": $autumn-primary,
+    "secondary": $autumn-secondary,
+    "success": $autumn-success,
+    "info": $autumn-info,
+    "warning": $autumn-warning,
+    "danger":  $autumn-danger,
+    "accent":  $autumn-accent,
+    "neutral":  $autumn-neutral,
+);
+
+$autumns-rgb: map-loop($autumns, to-rgb, "$value") !default;

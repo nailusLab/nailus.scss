@@ -1,0 +1,47 @@
+$pastel-primary:   #09ecf3 !default;
+$pastel-secondary: #966fb3 !default;
+$pastel-success:   #16a34a !default;
+$pastel-info:      #2563eb !default;
+$pastel-warning:   #ff7568 !default;
+$pastel-danger:    #ff0b04 !default;
+$pastel-accent:    #ffe999 !default;
+$pastel-neutral:   #3b8ac4 !default;
+$pastel-base-100:  #345da7 !default;
+
+$pastel-primary-content:   #005355 !default;
+$pastel-secondary-content: #08040c !default;
+$pastel-success-content:   #000a02 !default;
+$pastel-info-content:      #d2e2ff !default;
+$pastel-warning-content:   #110500 !default;
+$pastel-danger-content:    #180403 !default;
+$pastel-accent-content:    #161308 !default;
+$pastel-neutral-content:   #01070e !default;
+
+$pastel-base-content:      #d4deef !default;
+$pastel-base-200-content:  #2e5497 !default;
+$pastel-base-300-content:  #294b88 !default;
+
+$pastel-color-scheme: "light" !default;
+$pastels:(
+    "primary-content": $pastel-primary-content,
+    "secondary-content": $pastel-secondary-content,
+    "success-content": $pastel-success-content,
+    "info-content": $pastel-info-content,
+    "warning-content": $pastel-warning-content,
+    "danger-content":  $pastel-danger-content,
+    "accent-content":  $pastel-accent-content,
+    "neutral-content":  $pastel-neutral-content,
+    "base-content":  $pastel-base-content,
+    "base-200-content":  $pastel-base-200-content,
+    "base-300-content":  $pastel-base-300-content,
+    "primary": $pastel-primary,
+    "secondary": $pastel-secondary,
+    "success": $pastel-success,
+    "info": $pastel-info,
+    "warning": $pastel-warning,
+    "danger":  $pastel-danger,
+    "accent":  $pastel-accent,
+    "neutral":  $pastel-neutral,
+);
+
+$pastels-rgb: map-loop($pastels, to-rgb, "$value") !default;

@@ -1,0 +1,47 @@
+$bumblebee-primary:   #09ecf3 !default;
+$bumblebee-secondary: #966fb3 !default;
+$bumblebee-success:   #16a34a !default;
+$bumblebee-info:      #2563eb !default;
+$bumblebee-warning:   #ff7568 !default;
+$bumblebee-danger:    #ff0b04 !default;
+$bumblebee-accent:    #ffe999 !default;
+$bumblebee-neutral:   #3b8ac4 !default;
+$bumblebee-base-100:  #345da7 !default;
+
+$bumblebee-primary-content:   #005355 !default;
+$bumblebee-secondary-content: #08040c !default;
+$bumblebee-success-content:   #000a02 !default;
+$bumblebee-info-content:      #d2e2ff !default;
+$bumblebee-warning-content:   #110500 !default;
+$bumblebee-danger-content:    #180403 !default;
+$bumblebee-accent-content:    #161308 !default;
+$bumblebee-neutral-content:   #01070e !default;
+
+$bumblebee-base-content:      #d4deef !default;
+$bumblebee-base-200-content:  #2e5497 !default;
+$bumblebee-base-300-content:  #294b88 !default;
+
+$bumblebee-color-scheme: "light" !default;
+$bumblebees:(
+    "primary-content": $bumblebee-primary-content,
+    "secondary-content": $bumblebee-secondary-content,
+    "success-content": $bumblebee-success-content,
+    "info-content": $bumblebee-info-content,
+    "warning-content": $bumblebee-warning-content,
+    "danger-content":  $bumblebee-danger-content,
+    "accent-content":  $bumblebee-accent-content,
+    "neutral-content":  $bumblebee-neutral-content,
+    "base-content":  $bumblebee-base-content,
+    "base-200-content":  $bumblebee-base-200-content,
+    "base-300-content":  $bumblebee-base-300-content,
+    "primary": $bumblebee-primary,
+    "secondary": $bumblebee-secondary,
+    "success": $bumblebee-success,
+    "info": $bumblebee-info,
+    "warning": $bumblebee-warning,
+    "danger":  $bumblebee-danger,
+    "accent":  $bumblebee-accent,
+    "neutral":  $bumblebee-neutral,
+);
+
+$bumblebees-rgb: map-loop($bumblebees, to-rgb, "$value") !default;

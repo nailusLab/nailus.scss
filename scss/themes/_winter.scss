@@ -1,0 +1,47 @@
+$winter-primary:   #09ecf3 !default;
+$winter-secondary: #966fb3 !default;
+$winter-success:   #16a34a !default;
+$winter-info:      #2563eb !default;
+$winter-warning:   #ff7568 !default;
+$winter-danger:    #ff0b04 !default;
+$winter-accent:    #ffe999 !default;
+$winter-neutral:   #3b8ac4 !default;
+$winter-base-100:  #345da7 !default;
+
+$winter-primary-content:   #005355 !default;
+$winter-secondary-content: #08040c !default;
+$winter-success-content:   #000a02 !default;
+$winter-info-content:      #d2e2ff !default;
+$winter-warning-content:   #110500 !default;
+$winter-danger-content:    #180403 !default;
+$winter-accent-content:    #161308 !default;
+$winter-neutral-content:   #01070e !default;
+
+$winter-base-content:      #d4deef !default;
+$winter-base-200-content:  #2e5497 !default;
+$winter-base-300-content:  #294b88 !default;
+
+$winter-color-scheme: "light" !default;
+$winters:(
+    "primary-content": $winter-primary-content,
+    "secondary-content": $winter-secondary-content,
+    "success-content": $winter-success-content,
+    "info-content": $winter-info-content,
+    "warning-content": $winter-warning-content,
+    "danger-content":  $winter-danger-content,
+    "accent-content":  $winter-accent-content,
+    "neutral-content":  $winter-neutral-content,
+    "base-content":  $winter-base-content,
+    "base-200-content":  $winter-base-200-content,
+    "base-300-content":  $winter-base-300-content,
+    "primary": $winter-primary,
+    "secondary": $winter-secondary,
+    "success": $winter-success,
+    "info": $winter-info,
+    "warning": $winter-warning,
+    "danger":  $winter-danger,
+    "accent":  $winter-accent,
+    "neutral":  $winter-neutral,
+);
+
+$winters-rgb: map-loop($winters, to-rgb, "$value") !default;

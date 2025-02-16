@@ -1,0 +1,47 @@
+$dracula-primary:   #09ecf3 !default;
+$dracula-secondary: #966fb3 !default;
+$dracula-success:   #16a34a !default;
+$dracula-info:      #2563eb !default;
+$dracula-warning:   #ff7568 !default;
+$dracula-danger:    #ff0b04 !default;
+$dracula-accent:    #ffe999 !default;
+$dracula-neutral:   #3b8ac4 !default;
+$dracula-base-100:  #345da7 !default;
+
+$dracula-primary-content:   #005355 !default;
+$dracula-secondary-content: #08040c !default;
+$dracula-success-content:   #000a02 !default;
+$dracula-info-content:      #d2e2ff !default;
+$dracula-warning-content:   #110500 !default;
+$dracula-danger-content:    #180403 !default;
+$dracula-accent-content:    #161308 !default;
+$dracula-neutral-content:   #01070e !default;
+
+$dracula-base-content:      #d4deef !default;
+$dracula-base-200-content:  #2e5497 !default;
+$dracula-base-300-content:  #294b88 !default;
+
+$dracula-color-scheme: "dark" !default;
+$draculas:(
+    "primary-content": $dracula-primary-content,
+    "secondary-content": $dracula-secondary-content,
+    "success-content": $dracula-success-content,
+    "info-content": $dracula-info-content,
+    "warning-content": $dracula-warning-content,
+    "danger-content":  $dracula-danger-content,
+    "accent-content":  $dracula-accent-content,
+    "neutral-content":  $dracula-neutral-content,
+    "base-content":  $dracula-base-content,
+    "base-200-content":  $dracula-base-200-content,
+    "base-300-content":  $dracula-base-300-content,
+    "primary": $dracula-primary,
+    "secondary": $dracula-secondary,
+    "success": $dracula-success,
+    "info": $dracula-info,
+    "warning": $dracula-warning,
+    "danger":  $dracula-danger,
+    "accent":  $dracula-accent,
+    "neutral":  $dracula-neutral,
+);
+
+$draculas-rgb: map-loop($draculas, to-rgb, "$value") !default;

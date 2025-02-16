@@ -1,0 +1,47 @@
+$acid-primary:   #ff11fe !default;
+$acid-secondary: #ff7700 !default;
+$acid-success:   #00fa96 !default;
+$acid-info:      #0080ff !default;
+$acid-warning:   #ffe300 !default;
+$acid-danger:    #ff0b04 !default;
+$acid-accent:    #c9ff00 !default;
+$acid-neutral:   #140151 !default;
+$acid-base-100:  #fafafa !default;
+
+$acid-primary-content:   #190017 !default;
+$acid-secondary-content: #190400 !default;
+$acid-success-content:   #001607 !default;
+$acid-info-content:      #000616 !default;
+$acid-warning-content:   #161200 !default;
+$acid-danger-content:    #190000 !default;
+$acid-accent-content:    #0f1600 !default;
+$acid-neutral-content:   #c7cadc !default;
+
+$acid-base-content:      #151515 !default;
+$acid-base-200-content:  #e3e3e3 !default;
+$acid-base-300-content:  #cdcdcd !default;
+
+$acid-color-scheme: "light" !default;
+$acids:(
+    "primary-content": $acid-primary-content,
+    "secondary-content": $acid-secondary-content,
+    "success-content": $acid-success-content,
+    "info-content": $acid-info-content,
+    "warning-content": $acid-warning-content,
+    "danger-content":  $acid-danger-content,
+    "accent-content":  $acid-accent-content,
+    "neutral-content":  $acid-neutral-content,
+    "base-content":  $acid-base-content,
+    "base-200-content":  $acid-base-200-content,
+    "base-300-content":  $acid-base-300-content,
+    "primary": $acid-primary,
+    "secondary": $acid-secondary,
+    "success": $acid-success,
+    "info": $acid-info,
+    "warning": $acid-warning,
+    "danger":  $acid-danger,
+    "accent":  $acid-accent,
+    "neutral":  $acid-neutral,
+);
+
+$acids-rgb: map-loop($acids, to-rgb, "$value") !default;

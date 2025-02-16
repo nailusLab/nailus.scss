@@ -1,0 +1,47 @@
+$black-primary:   #09ecf3 !default;
+$black-secondary: #966fb3 !default;
+$black-success:   #16a34a !default;
+$black-info:      #2563eb !default;
+$black-warning:   #ff7568 !default;
+$black-danger:    #ff0b04 !default;
+$black-accent:    #ffe999 !default;
+$black-neutral:   #3b8ac4 !default;
+$black-base-100:  #345da7 !default;
+
+$black-primary-content:   #005355 !default;
+$black-secondary-content: #08040c !default;
+$black-success-content:   #000a02 !default;
+$black-info-content:      #d2e2ff !default;
+$black-warning-content:   #110500 !default;
+$black-danger-content:    #180403 !default;
+$black-accent-content:    #161308 !default;
+$black-neutral-content:   #01070e !default;
+
+$black-base-content:      #d4deef !default;
+$black-base-200-content:  #2e5497 !default;
+$black-base-300-content:  #294b88 !default;
+
+$black-color-scheme: "dark" !default;
+$blacks:(
+    "primary-content": $black-primary-content,
+    "secondary-content": $black-secondary-content,
+    "success-content": $black-success-content,
+    "info-content": $black-info-content,
+    "warning-content": $black-warning-content,
+    "danger-content":  $black-danger-content,
+    "accent-content":  $black-accent-content,
+    "neutral-content":  $black-neutral-content,
+    "base-content":  $black-base-content,
+    "base-200-content":  $black-base-200-content,
+    "base-300-content":  $black-base-300-content,
+    "primary": $black-primary,
+    "secondary": $black-secondary,
+    "success": $black-success,
+    "info": $black-info,
+    "warning": $black-warning,
+    "danger":  $black-danger,
+    "accent":  $black-accent,
+    "neutral":  $black-neutral,
+);
+
+$blacks-rgb: map-loop($blacks, to-rgb, "$value") !default;

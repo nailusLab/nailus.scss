@@ -22,3 +22,5 @@ $skys: (
     "sky-900": $sky-900,
     "sky-950": $sky-950,
 ) !default;
+
+$skys-rgb: map-loop($skys, to-rgb, "$value") !default;

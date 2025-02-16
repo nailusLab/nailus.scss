@@ -22,3 +22,5 @@ $yellows: (
     "yellow-900": $yellow-900,
     "yellow-950": $yellow-950,
 ) !default;
+
+$yellows-rgb: map-loop($yellows, to-rgb, "$value") !default;

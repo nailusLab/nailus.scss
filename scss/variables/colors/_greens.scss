@@ -22,3 +22,5 @@ $greens: (
     "green-900": $green-900,
     "green-950": $green-950,
 ) !default;
+
+$greens-rgb: map-loop($greens, to-rgb, "$value") !default;
