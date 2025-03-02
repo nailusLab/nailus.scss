@@ -99,6 +99,70 @@ $utilities: map-merge(
       values2: (
         null: 1px,
       ),
+      property3: height,
+      values3: (
+        null: 1px,
+      ),
+      property4: padding,
+      values4: (
+        null: 0,
+      ),
+      property5: margin,
+      values5: (
+        null: -1px,
+      ),
+      property6: overflow,
+      values6: (
+        null: hidden,
+      ),
+      property7: clip,
+      values7: (
+        null: rect(0,0,0,0),
+      ),
+      property8: white-space,
+      values8: (
+        null: nowrap,
+      ),
+      property9: border-width,
+      values9: (
+        null: 0,
+      ),
+    ),
+    "not-sr-only": (
+      // responsive: true,
+      class: not-sr-only,
+      property: position,
+      values: (
+        null: static,
+      ),
+      property2: width,
+      values2: (
+        null: auto,
+      ),
+      property3: height,
+      values3: (
+        null: auto,
+      ),
+      property4: padding,
+      values4: (
+        null: 0,
+      ),
+      property5: margin,
+      values5: (
+        null: 0,
+      ),
+      property6: overflow,
+      values6: (
+        null: visible,
+      ),
+      property7: clip,
+      values7: (
+        null: auto,
+      ),
+      property8: white-space,
+      values8: (
+        null: normal,
+      ),
     ),
   ),
   $utilities
