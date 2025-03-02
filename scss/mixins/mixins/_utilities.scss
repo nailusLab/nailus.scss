@@ -8,17 +8,117 @@
     $values: zip($values, $values);
   }
 
+  $values2: map-get($utility, values2);
+
+  @if type-of($values2) == "string" or type-of(nth($values2, 1)) != "list" {
+    $values2: zip($values2, $values2);
+  }
+
+  $values3: map-get($utility, values3);
+
+  @if type-of($values3) == "string" or type-of(nth($values3, 1)) != "list" {
+    $values3: zip($values3, $values3);
+  }
+
+  $values4: map-get($utility, values4);
+
+  @if type-of($values4) == "string" or type-of(nth($values4, 1)) != "list" {
+    $values4: zip($values4, $values4);
+  }
+
+  $values5: map-get($utility, values5);
+
+  @if type-of($values5) == "string" or type-of(nth($values5, 1)) != "list" {
+    $values5: zip($values5, $values5);
+  }
+
+  $values6: map-get($utility, values6);
+
+  @if type-of($values6) == "string" or type-of(nth($values6, 1)) != "list" {
+    $values6: zip($values6, $values6);
+  }
+
+  $values7: map-get($utility, values7);
+
+  @if type-of($values7) == "string" or type-of(nth($values7, 1)) != "list" {
+    $values7: zip($values7, $values7);
+  }
+
+  $values8: map-get($utility, values8);
+
+  @if type-of($values8) == "string" or type-of(nth($values8, 1)) != "list" {
+    $values8: zip($values8, $values8);
+  }
+
+  $values9: map-get($utility, values9);
+
+  @if type-of($values9) == "string" or type-of(nth($values9, 1)) != "list" {
+    $values9: zip($values9, $values9);
+  }
+
   @each $key, $value in $values {
     $properties: map-get($utility, property);
+
+    $properties2: map-get($utility, property2);
+
+    $properties3: map-get($utility, property3);
+
+    $properties4: map-get($utility, property4);
+
+    $properties5: map-get($utility, property5);
+
+    $properties6: map-get($utility, property6);
+
+    $properties7: map-get($utility, property7);
+
+    $properties8: map-get($utility, property8);
+
+    $properties9: map-get($utility, property9);
 
     // Multiple properties are possible, for example with vertical or horizontal margins or paddings
     @if type-of($properties) == "string" {
       $properties: append((), $properties);
     }
 
+    @if type-of($properties2) == "string" {
+      $properties2: append((), $properties2);
+    }
+
+    @if type-of($properties3) == "string" {
+      $properties3: append((), $properties3);
+    }
+
+    @if type-of($properties4) == "string" {
+      $properties4: append((), $properties4);
+    }
+
+    @if type-of($properties5) == "string" {
+      $properties5: append((), $properties5);
+    }
+
+    @if type-of($properties6) == "string" {
+      $properties6: append((), $properties6);
+    }
+
+    @if type-of($properties7) == "string" {
+      $properties7: append((), $properties7);
+    }
+
+    @if type-of($properties8) == "string" {
+      $properties8: append((), $properties8);
+    }
+
+    @if type-of($properties9) == "string" {
+      $properties9: append((), $properties9);
+    }
+
     // Use custom class if present
     $property-class: if(map-has-key($utility, class), map-get($utility, class), nth($properties, 1));
     $property-class: if($property-class == null, "", $property-class);
+
+    // Use custom class if present divide
+    $property-divide: if(map-has-key($utility, divide), map-get($utility, divide), " ");
+    $property-divide: if($property-divide == true, " > " + " * + *", "");
 
     // Use custom CSS variable name if present, otherwise default to `class`
     $css-variable-name: if(map-has-key($utility, css-variable-name), map-get($utility, css-variable-name), map-get($utility, class));
@@ -29,7 +129,8 @@
     $infix: if($property-class == "" and str-slice($infix, 1, 1) == "-", str-slice($infix, 2), $infix);
 
     // Don't prefix if value key is null (e.g. with shadow class)
-    $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
+    // $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
+    $property-class-modifier: if($key, if($property-class == "", "", "-") + $key, "");
 
     @if map-get($utility, rfs) {
       // Inside the media query
@@ -48,39 +149,89 @@
     $is-local-vars: map-get($utility, local-vars);
     $is-rtl: map-get($utility, rtl);
 
+    $add-css-var: map-get($utility, add-css-var);
+
     @if $value != null {
       @if $is-rtl == false {
         /* rtl:begin:remove */
       }
 
       @if $is-css-var {
-        .#{$property-class + $infix + $property-class-modifier} {
-          --#{$prefix}#{$css-variable-name}: #{$value};
+        .#{ $infix + $property-class + $property-class-modifier} {
+          #{$prefix}#{$css-variable-name}: #{$value};
         }
 
         @each $pseudo in $state {
-          .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
-            --#{$prefix}#{$css-variable-name}: #{$value};
+          .#{ $infix + $property-class + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+            #{$prefix}#{$css-variable-name}: #{$value};
           }
         }
       } @else {
-        .#{$property-class + $infix + $property-class-modifier} {
+        .#{ $infix + $property-class + $property-class-modifier} {
           @each $property in $properties {
             @if $is-local-vars {
               @each $local-var, $variable in $is-local-vars {
-                --#{$prefix}#{$local-var}: #{$variable};
+                #{$prefix}#{$local-var}: #{$variable};
               }
             }
-            #{$property}: $value if($enable-important-utilities, !important, null);
+            #{$property}: if($add-css-var == content, var(#{$prefix}#{$property-class + $property-class-modifier}, $value), if($add-css-var == default, var(#{$prefix}#{$property-class + $property-class-modifier}), $value)) if($enable-important-utilities, !important, null);
+          }
+
+          @each $key2, $value2 in $values2 {
+            @each $property2 in $properties2 {
+              #{$property2}: $value2 if($enable-important-utilities and $property2, !important, null);
+            }
+          }
+
+          @each $key3, $value3 in $values3 {
+            @each $property3 in $properties3 {
+              #{$property3}: $value3 if($enable-important-utilities and $property3, !important, null);
+            }
+          }
+
+          @each $key4, $value4 in $values4 {
+            @each $property4 in $properties4 {
+              #{$property4}: $value4 if($enable-important-utilities and $property4, !important, null);
+            }
+          }
+
+          @each $key5, $value5 in $values5 {
+            @each $property5 in $properties5 {
+              #{$property5}: $value5 if($enable-important-utilities and $property5, !important, null);
+            }
+          }
+
+          @each $key6, $value6 in $values6 {
+            @each $property6 in $properties6 {
+              #{$property6}: $value6 if($enable-important-utilities and $property6, !important, null);
+            }
+          }
+
+          @each $key7, $value7 in $values7 {
+            @each $property7 in $properties7 {
+              #{$property7}: $value7 if($enable-important-utilities and $property7, !important, null);
+            }
+          }
+
+          @each $key8, $value8 in $values8 {
+            @each $property8 in $properties8 {
+              #{$property8}: $value8 if($enable-important-utilities and $property8, !important, null);
+            }
+          }
+
+          @each $key9, $value9 in $values9 {
+            @each $property9 in $properties9 {
+              #{$property9}: $value9 if($enable-important-utilities and $property9, !important, null);
+            }
           }
         }
 
         @each $pseudo in $state {
-          .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+          .#{ $infix + $property-class + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
             @each $property in $properties {
               @if $is-local-vars {
                 @each $local-var, $variable in $is-local-vars {
-                  --#{$prefix}#{$local-var}: #{$variable};
+                  #{$prefix}#{$local-var}: #{$variable};
                 }
               }
               #{$property}: $value if($enable-important-utilities, !important, null);

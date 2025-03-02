@@ -4,22 +4,101 @@ $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
-    // scss-docs-start utils-vertical-align
-    "align": (
-      property: vertical-align,
-      class: align,
-      values: baseline top middle bottom text-bottom text-top
-    ),
-    // scss-docs-end utils-vertical-align
-    // scss-docs-start utils-float
-    "float": (
-      responsive: true,
-      property: float,
+    // scss-docs-start utils-layout
+    // "aspect-ratio":
+    //   (
+    //     responsive: true,
+    //     property: aspect-ratio,
+    //     class: aspect,
+    //     values: (
+    //       auto: auto,
+    //       "square": #{"1 / 1"},
+    //       "default": #{"4 / 3"},
+    //       "video": #{"16 / 9"},
+    //       "portrait": #{"9 / 16"},
+    //       "paysage": #{"21 / 9"}
+    //     )
+    //   ),
+    "columns": (
+      // responsive: true,
+      property: columns,
+      class: columns,
+      add-css-var: content,
       values: (
-        start: left,
-        end: right,
-        none: none,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10,
+        11: 11,
+        12: 12
       )
+    ),
+    "columns-grid-containers": (
+      // responsive: true,
+      property: columns,
+      class: columns,
+      add-css-var: default,
+      values: $grid-containers
+    ),
+    "box-decoration-break": (
+      property: box-decoration-break,
+      class: box-decoration,
+      values: clone slice
+    ),
+    "box-sizing": (
+      property: box-sizing,
+      class: box,
+      values: (
+        border: border-box,
+        content: content-box
+      )
+    ),
+    "display": (
+      // responsive: true,
+      // print: true,
+      class: null,
+      property: display,
+      values: (
+        inline: inline,
+        block: block,
+        inline-block: inline-block,
+        flow-root: flow-root,
+        flex: flex,
+        inline-flex: inline-flex,
+        grid: grid,
+        inline-grid: inline-grid,
+        contents: contents,
+        table: table,
+        inline-table: inline-table,
+        table-caption: table-caption,
+        table-cell: table-cell,
+        table-column: table-column,
+        table-column-group: table-column-group,
+        table-footer-group: table-footer-group,
+        table-header-group: table-header-group,
+        table-row-group: table-row-group,
+        table-row: table-row,
+        list-item: list-item,
+        hidden: none,
+      )
+    ),
+    "sr-only": (
+      // responsive: true,
+      class: sr-only,
+      property: position,
+      values: (
+        null: absolute,
+      ),
+      property2: width,
+      values2: (
+        null: 1px,
+      ),
     ),
   ),
   $utilities
