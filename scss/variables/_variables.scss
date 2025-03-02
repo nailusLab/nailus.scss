@@ -36,6 +36,35 @@
 @import "bases/enables";
 // scss-docs-end base
 
+// nailus.scss components
+//
+// scss-docs-start components-stack
+@import "components/tables.scss";
+@import "components/forms";
+@import "components/buttons";
+@import "components/transitions";
+@import "components/dropdown";
+@import "components/button-group";
+@import "components/nav";
+@import "components/navbar";
+@import "components/card";
+@import "components/accordion";
+@import "components/breadcrumb";
+@import "components/pagination";
+@import "components/badge";
+@import "components/alert";
+@import "components/progress";
+@import "components/list-group";
+@import "components/close";
+@import "components/toasts";
+@import "components/modal";
+@import "components/tooltip";
+@import "components/popover";
+@import "components/carousel";
+@import "components/spinners";
+@import "components/offcanvas";
+@import "components/placeholders";
+// scss-docs-end components-stack
 
 // scss-docs-start utilities
 @import "utilities/typography";
