@@ -5,20 +5,20 @@ $utilities: () !default;
 $utilities: map-merge(
   (
     // scss-docs-start utils-layout
-    // "aspect-ratio":
-    //   (
-    //     responsive: true,
-    //     property: aspect-ratio,
-    //     class: aspect,
-    //     values: (
-    //       auto: auto,
-    //       "square": #{"1 / 1"},
-    //       "default": #{"4 / 3"},
-    //       "video": #{"16 / 9"},
-    //       "portrait": #{"9 / 16"},
-    //       "paysage": #{"21 / 9"}
-    //     )
-    //   ),
+    "aspect-ratio":
+      (
+        // responsive: true,
+        property: aspect-ratio,
+        class: aspect,
+        values: (
+          auto: auto,
+          "square": #{"1 / 1"},
+          "default": #{"4 / 3"},
+          "video": #{"16 / 9"},
+          "portrait": #{"9 / 16"},
+          "paysage": #{"21 / 9"}
+        )
+      ),
     "columns": (
       // responsive: true,
       property: columns,
@@ -163,6 +163,60 @@ $utilities: map-merge(
       values8: (
         null: normal,
       ),
+    ),
+    "float": (
+      // responsive: true,
+      class: float,
+      property: float,
+      values: (
+        left: left,
+        right: right,
+        none: none,
+        start: inline-start,
+        end: inline-end,
+      )
+    ),
+    "clear": (
+      // responsive: true,
+      class: clear,
+      property: clear,
+      values: (
+        left: left,
+        right: right,
+        both: both,
+        start: inline-start,
+        end: inline-end,
+        none: none,
+      )
+    ),
+    "object-fit": (
+      // responsive: true,
+      property: object-fit,
+      class: object,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        scale: scale-down,
+        none: none
+      )
+    ),
+    "object-position": (
+      // responsive: true,
+      property: object-position,
+      add-css-var: content,
+      class: object,
+      values: (
+        bottom: bottom,
+        center: center,
+        left: left,
+        left-bottom: left bottom,
+        left-top: left top,
+        right: right,
+        right-bottom: right bottom,
+        right-top: right top,
+        top: top
+      )
     ),
   ),
   $utilities
