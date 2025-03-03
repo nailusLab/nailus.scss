@@ -218,6 +218,109 @@ $utilities: map-merge(
         top: top
       )
     ),
+    "overflow": (
+      // responsive: true,
+      property: overflow,
+      class: overflow,
+      values: auto hidden visible scroll
+    ),
+    "overflow-x": (
+      // responsive: true,
+      property: overflow-x,
+      class: overflow-x,
+      values: auto hidden visible scroll
+    ),
+    "overflow-y": (
+      // responsive: true,
+      property: overflow-y,
+      class: overflow-y,
+      values: auto hidden visible scroll
+    ),
+    "overscroll-behavior": (
+      // responsive: true,
+      property: overscroll-behavior,
+      class: overscroll,
+      values: auto contain none
+    ),
+    "overscroll-behavior-y": (
+      // responsive: true,
+      property: overscroll-behavior-y,
+      class: overscroll-y,
+      values: auto contain none
+    ),
+    "overscroll-behavior-x": (
+      // responsive: true,
+      property: overscroll-behavior-x,
+      class: overscroll-x,
+      values: auto contain none
+    ),
+    "positions": (
+      // responsive: true,
+      property: position,
+      class: null,
+      values: (
+        static: static,
+        fixed: fixed,
+        absolute: absolute,
+        relative: relative
+      )
+    ),
+    "position-sticky": (
+      // responsive: true,
+      property: position,
+      class: null,
+      values: (
+        sticky: sticky
+      ),
+      property2: position,
+      values2: (
+        null: -webkit-sticky
+      )
+    ),
+    "top": (
+      // responsive: true,
+      property: top,
+      class: top,
+      local-vars: (
+        "top": "$values",
+      ),
+      breakpoints: css-var,
+      add-css-var: default,
+      values: $spacers
+    ),
+    "bottom": (
+      // responsive: true,
+      property: bottom,
+      class: bottom,
+      local-vars: (
+        "bottom": "$values",
+      ),
+      breakpoints: css-var,
+      add-css-var: default,
+      values: $spacers
+    ),
+    "left": (
+      // responsive: true,
+      property: left,
+      class: left,
+      local-vars: (
+        "left": "$values",
+      ),
+      breakpoints: css-var,
+      add-css-var: default,
+      values: $spacers
+    ),
+    "right": (
+      // responsive: true,
+      property: right,
+      class: right,
+      local-vars: (
+        "right": "$values",
+      ),
+      breakpoints: css-var,
+      add-css-var: default,
+      values: $spacers
+    ),
   ),
   $utilities
 );
