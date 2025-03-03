@@ -277,50 +277,59 @@ $utilities: map-merge(
         null: -webkit-sticky
       )
     ),
-    "top": (
+    "inset": (
       // responsive: true,
-      property: top,
-      class: top,
-      local-vars: (
-        "top": "$values",
-      ),
-      breakpoints: css-var,
-      add-css-var: default,
+      property: inset,
+      class: inset,
+      function: "calc()",
+      add-css-var: content,
+      css-variable-name: spacing,
       values: $spacers
     ),
-    "bottom": (
-      // responsive: true,
-      property: bottom,
-      class: bottom,
-      local-vars: (
-        "bottom": "$values",
-      ),
-      breakpoints: css-var,
-      add-css-var: default,
-      values: $spacers
-    ),
-    "left": (
-      // responsive: true,
-      property: left,
-      class: left,
-      local-vars: (
-        "left": "$values",
-      ),
-      breakpoints: css-var,
-      add-css-var: default,
-      values: $spacers
-    ),
-    "right": (
-      // responsive: true,
-      property: right,
-      class: right,
-      local-vars: (
-        "right": "$values",
-      ),
-      breakpoints: css-var,
-      add-css-var: default,
-      values: $spacers
-    ),
+    // "top": (
+    //   // responsive: true,
+    //   property: top,
+    //   class: top,
+    //   local-vars: (
+    //     "top": "$values",
+    //   ),
+    //   breakpoints: css-var,
+    //   add-css-var: default,
+    //   values: $spacers
+    // ),
+    // "bottom": (
+    //   // responsive: true,
+    //   property: bottom,
+    //   class: bottom,
+    //   local-vars: (
+    //     "bottom": "$values",
+    //   ),
+    //   breakpoints: css-var,
+    //   add-css-var: default,
+    //   values: $spacers
+    // ),
+    // "left": (
+    //   // responsive: true,
+    //   property: left,
+    //   class: left,
+    //   local-vars: (
+    //     "left": "$values",
+    //   ),
+    //   breakpoints: css-var,
+    //   add-css-var: default,
+    //   values: $spacers
+    // ),
+    // "right": (
+    //   // responsive: true,
+    //   property: right,
+    //   class: right,
+    //   local-vars: (
+    //     "right": "$values",
+    //   ),
+    //   breakpoints: css-var,
+    //   add-css-var: default,
+    //   values: $spacers
+    // ),
   ),
   $utilities
 );

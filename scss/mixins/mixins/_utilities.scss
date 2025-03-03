@@ -166,6 +166,9 @@
     $breakpoints: map-get($utility, breakpoints);
     $breakpointsCssVar: $breakpoints  == css-var;
 
+    $function: map-get($utility, function);
+    $fun_calc: $function  == "calc()";
+
     @if $value != null {
       @if $is-rtl == false {
         /* rtl:begin:remove */
@@ -202,8 +205,16 @@
               }
             }
           }@else {
-            @each $property in $properties {
-              #{$property}: if($addCssVar_content, var(#{$prefix}#{$property-class + $property-class-modifier}, $value), if($addCssVar_default, var(#{$prefix}#{$property-class + $property-class-modifier}), $value)) if($enable-important-utilities, !important, null);
+            @if $fun_calc {
+              @each $property in $properties {
+                #{$property}: calc(
+                  var(
+                    if(
+                      $addCssVar_content or $addCssVar_default, if($css-variable-name == spacing, #{$prefix}#{$css-variable-name}, #{$prefix}#{$property-class + $property-class-modifier}), null
+                    )
+                  ) * #{$value}
+                );
+              }
             }
           }
 
