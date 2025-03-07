@@ -107,6 +107,37 @@ $grid-containers: (
 ) !default;
 // scss-docs-end grid-containers
 
+// scss-docs-start grid-percentages
+$grid-percentage-auto:     auto !default;
+$grid-percentage-1:   8.333333% !default;
+$grid-percentage-2:  16.666667% !default;
+$grid-percentage-3: 25% !default;
+$grid-percentage-4:  33.333333% !default;
+$grid-percentage-5:  41.666667% !default;
+$grid-percentage-6: 50% !default;
+$grid-percentage-7:  58.333333% !default;
+$grid-percentage-8:  66.666667% !default;
+$grid-percentage-9: 75% !default;
+$grid-percentage-10: 83.333333% !default;
+$grid-percentage-11: 91.666667% !default;
+$grid-percentage-full: 100% !default;
+$grids-percentages: (
+    auto: auto,
+    "1\\/12": $grid-percentage-1,
+    "2\\/12": $grid-percentage-2,
+    "3\\/12": $grid-percentage-3,
+    "4\\/12": $grid-percentage-4,
+    "5\\/12": $grid-percentage-5,
+    "6\\/12": $grid-percentage-6,
+    "7\\/12": $grid-percentage-7,
+    "8\\/12": $grid-percentage-8,
+    "9\\/12": $grid-percentage-9,
+    "10\\/12": $grid-percentage-10,
+    "11\\/12": $grid-percentage-11,
+    full: $grid-percentage-full
+) !default;
+// scss-docs-start grid-percentages
+
 // Body
 //
 // Settings for the `<body>` element.
