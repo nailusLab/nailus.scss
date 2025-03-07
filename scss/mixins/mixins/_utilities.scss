@@ -170,7 +170,7 @@
     $add_css_var_content: $add-css-var  == content;
 
     $css_vars_names: if(map-get($utility, css-variable-name), $css-variable-name, null);
-    $css_var_name_auth: if($css-variable-name == container, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}#{$property-class-modifier}, if($css-variable-name == spacing, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, if($css-variable-name == grid-spacing, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, null)));
+    $css_var_name_auth: if($css-variable-name == container, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}#{$property-class-modifier}, if($css-variable-name == spacing, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, if($css-variable-name == fraction, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, null)));
 
     $function: map-get($utility, function);
 
