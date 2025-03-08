@@ -160,7 +160,7 @@
     $is-rtl: map-get($utility, rtl);
     
     $breakpoints: map-get($utility, breakpoints);
-    $breakpts_css_vars: if($breakpoints == css-var, if($css-variable-name != spacing, #{$auth-infix}, null), null);
+    $breakpts_css_vars: if($breakpoints == css-var, if($css-variable-name == spacing or $css-variable-name == fraction or $css-variable-name == number, null, #{$auth-infix}), null);
 
     $negatives-spacings: map-get($utility, negative-spacing);
     $negative-extention: if($enable-negative-spacings and $negatives-spacings == true, "-", null);
@@ -170,7 +170,7 @@
     $add_css_var_content: $add-css-var  == content;
 
     $css_vars_names: if(map-get($utility, css-variable-name), $css-variable-name, null);
-    $css_var_name_auth: if($css-variable-name == container, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}#{$property-class-modifier}, if($css-variable-name == spacing, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, if($css-variable-name == fraction, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, null)));
+    $css_var_name_auth: if($css-variable-name == container, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}#{$property-class-modifier}, if($css-variable-name == spacing, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, if($css-variable-name == fraction, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, if($css-variable-name == number, #{$prefix}#{$breakpts_css_vars}#{$css-variable-name}, null))));
 
     $function: map-get($utility, function);
 

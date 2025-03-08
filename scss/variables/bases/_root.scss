@@ -11,8 +11,8 @@ $prefix: --#{$variable-prefix} !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:      1rem !default;
-$grid-spacer:   1% !default;
+$spacer:         1 !default;
+$grid-spacer:    1 !default;
 // scss-docs-start spacer-variables-maps
 $spacers: (
   0: 0,
@@ -107,36 +107,36 @@ $grid-containers: (
 ) !default;
 // scss-docs-end grid-containers
 
-// scss-docs-start grid-percentages
-$grid-percentage-auto:     auto !default;
-$grid-percentage-1:   8.333333% !default;
-$grid-percentage-2:  16.666667% !default;
-$grid-percentage-3: 25% !default;
-$grid-percentage-4:  33.333333% !default;
-$grid-percentage-5:  41.666667% !default;
-$grid-percentage-6: 50% !default;
-$grid-percentage-7:  58.333333% !default;
-$grid-percentage-8:  66.666667% !default;
-$grid-percentage-9: 75% !default;
-$grid-percentage-10: 83.333333% !default;
-$grid-percentage-11: 91.666667% !default;
-$grid-percentage-full: 100% !default;
-$grids-percentages: (
+// scss-docs-start fractions
+$fraction-auto:     auto !default;
+$fraction-1:   8.333333% !default;
+$fraction-2:  16.666667% !default;
+$fraction-3: 25% !default;
+$fraction-4:  33.333333% !default;
+$fraction-5:  41.666667% !default;
+$fraction-6: 50% !default;
+$fraction-7:  58.333333% !default;
+$fraction-8:  66.666667% !default;
+$fraction-9: 75% !default;
+$fraction-10: 83.333333% !default;
+$fraction-11: 91.666667% !default;
+$fraction-full: 100% !default;
+$fractions: (
     auto: auto,
-    "1\\/12": $grid-percentage-1,
-    "2\\/12": $grid-percentage-2,
-    "3\\/12": $grid-percentage-3,
-    "4\\/12": $grid-percentage-4,
-    "5\\/12": $grid-percentage-5,
-    "6\\/12": $grid-percentage-6,
-    "7\\/12": $grid-percentage-7,
-    "8\\/12": $grid-percentage-8,
-    "9\\/12": $grid-percentage-9,
-    "10\\/12": $grid-percentage-10,
-    "11\\/12": $grid-percentage-11,
-    full: $grid-percentage-full
+    "1\\/12": $fraction-1,
+    "2\\/12": $fraction-2,
+    "3\\/12": $fraction-3,
+    "4\\/12": $fraction-4,
+    "5\\/12": $fraction-5,
+    "6\\/12": $fraction-6,
+    "7\\/12": $fraction-7,
+    "8\\/12": $fraction-8,
+    "9\\/12": $fraction-9,
+    "10\\/12": $fraction-10,
+    "11\\/12": $fraction-11,
+    full: $fraction-full
 ) !default;
-// scss-docs-start grid-percentages
+// scss-docs-start fractions
 
 // Body
 //
@@ -167,3 +167,15 @@ $body-color-dark:                   $gray-300 !default;
 // $body-emphasis-color-dark:          $white !default;
 // $border-color-dark:                 $gray-700 !default;
 // $border-color-translucent-dark:     rgba($white, .15) !default;
+
+// scss-docs-start zindex-levels-map
+$zindex-levels: (
+    n1: -1,
+    0: 0,
+    10: 10,
+    20: 20,
+    30: 30,
+    40: 40,
+    50: 50
+) !default;
+// scss-docs-end zindex-levels-map

@@ -4,267 +4,267 @@ $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
-    // // scss-docs-start utils-layout
-    // "aspect-ratio":
-    //   (
-    //     // responsive: true,
-    //     property: aspect-ratio,
-    //     class: aspect,
-    //     values: (
-    //       auto: auto,
-    //       "square": #{"1 / 1"},
-    //       "default": #{"4 / 3"},
-    //       "video": #{"16 / 9"},
-    //       "portrait": #{"9 / 16"},
-    //       "paysage": #{"21 / 9"}
-    //     )
-    //   ),
-    // "columns": (
-    //   // responsive: true,
-    //   property: columns,
-    //   class: columns,
-    //   add-css-var: content,
-    //   breakpoints: css-var,
-    //   values: 1 2 3 4 5 6 7 8 9 10 11 12
-    // ),
-    // "columns-grid-containers": (
-    //   // responsive: true,
-    //   property: columns,
-    //   class: columns,
-    //   add-css-var: default,
-    //   css-variable-name: container,
-    //   values: $grid-containers
-    // ),
-    // "box-decoration-break": (
-    //   property: box-decoration-break,
-    //   class: box-decoration,
-    //   values: clone slice
-    // ),
-    // "box-sizing": (
-    //   property: box-sizing,
-    //   class: box,
-    //   values: (
-    //     border: border-box,
-    //     content: content-box
-    //   )
-    // ),
-    // "display": (
-    //   // responsive: true,
-    //   // print: true,
-    //   class: null,
-    //   property: display,
-    //   values: (
-    //     inline: inline,
-    //     block: block,
-    //     inline-block: inline-block,
-    //     flow-root: flow-root,
-    //     flex: flex,
-    //     inline-flex: inline-flex,
-    //     grid: grid,
-    //     inline-grid: inline-grid,
-    //     contents: contents,
-    //     table: table,
-    //     inline-table: inline-table,
-    //     table-caption: table-caption,
-    //     table-cell: table-cell,
-    //     table-column: table-column,
-    //     table-column-group: table-column-group,
-    //     table-footer-group: table-footer-group,
-    //     table-header-group: table-header-group,
-    //     table-row-group: table-row-group,
-    //     table-row: table-row,
-    //     list-item: list-item,
-    //     hidden: none,
-    //   )
-    // ),
-    // "sr-only": (
-    //   // responsive: true,
-    //   class: sr-only,
-    //   property: position,
-    //   values: (
-    //     null: absolute,
-    //   ),
-    //   property2: width,
-    //   values2: (
-    //     null: 1px,
-    //   ),
-    //   property3: height,
-    //   values3: (
-    //     null: 1px,
-    //   ),
-    //   property4: padding,
-    //   values4: (
-    //     null: 0,
-    //   ),
-    //   property5: margin,
-    //   values5: (
-    //     null: -1px,
-    //   ),
-    //   property6: overflow,
-    //   values6: (
-    //     null: hidden,
-    //   ),
-    //   property7: clip,
-    //   values7: (
-    //     null: rect(0,0,0,0),
-    //   ),
-    //   property8: white-space,
-    //   values8: (
-    //     null: nowrap,
-    //   ),
-    //   property9: border-width,
-    //   values9: (
-    //     null: 0,
-    //   ),
-    // ),
-    // "not-sr-only": (
-    //   // responsive: true,
-    //   class: not-sr-only,
-    //   property: position,
-    //   values: (
-    //     null: static,
-    //   ),
-    //   property2: width,
-    //   values2: (
-    //     null: auto,
-    //   ),
-    //   property3: height,
-    //   values3: (
-    //     null: auto,
-    //   ),
-    //   property4: padding,
-    //   values4: (
-    //     null: 0,
-    //   ),
-    //   property5: margin,
-    //   values5: (
-    //     null: 0,
-    //   ),
-    //   property6: overflow,
-    //   values6: (
-    //     null: visible,
-    //   ),
-    //   property7: clip,
-    //   values7: (
-    //     null: auto,
-    //   ),
-    //   property8: white-space,
-    //   values8: (
-    //     null: normal,
-    //   ),
-    // ),
-    // "float": (
-    //   // responsive: true,
-    //   class: float,
-    //   property: float,
-    //   values: (
-    //     left: left,
-    //     right: right,
-    //     none: none,
-    //     start: inline-start,
-    //     end: inline-end,
-    //   )
-    // ),
-    // "clear": (
-    //   // responsive: true,
-    //   class: clear,
-    //   property: clear,
-    //   values: (
-    //     left: left,
-    //     right: right,
-    //     both: both,
-    //     start: inline-start,
-    //     end: inline-end,
-    //     none: none,
-    //   )
-    // ),
-    // "object-fit": (
-    //   // responsive: true,
-    //   property: object-fit,
-    //   class: object,
-    //   values: (
-    //     contain: contain,
-    //     cover: cover,
-    //     fill: fill,
-    //     scale: scale-down,
-    //     none: none
-    //   )
-    // ),
-    // "object-position": (
-    //   // responsive: true,
-    //   property: object-position,
-    //   class: object,
-    //   values: (
-    //     bottom: bottom,
-    //     center: center,
-    //     left: left,
-    //     left-bottom: left bottom,
-    //     left-top: left top,
-    //     right: right,
-    //     right-bottom: right bottom,
-    //     right-top: right top,
-    //     top: top
-    //   )
-    // ),
-    // "overflow": (
-    //   // responsive: true,
-    //   property: overflow,
-    //   class: overflow,
-    //   values: auto hidden visible scroll
-    // ),
-    // "overflow-x": (
-    //   // responsive: true,
-    //   property: overflow-x,
-    //   class: overflow-x,
-    //   values: auto hidden visible scroll
-    // ),
-    // "overflow-y": (
-    //   // responsive: true,
-    //   property: overflow-y,
-    //   class: overflow-y,
-    //   values: auto hidden visible scroll
-    // ),
-    // "overscroll-behavior": (
-    //   // responsive: true,
-    //   property: overscroll-behavior,
-    //   class: overscroll,
-    //   values: auto contain none
-    // ),
-    // "overscroll-behavior-y": (
-    //   // responsive: true,
-    //   property: overscroll-behavior-y,
-    //   class: overscroll-y,
-    //   values: auto contain none
-    // ),
-    // "overscroll-behavior-x": (
-    //   // responsive: true,
-    //   property: overscroll-behavior-x,
-    //   class: overscroll-x,
-    //   values: auto contain none
-    // ),
-    // "positions": (
-    //   // responsive: true,
-    //   property: position,
-    //   class: null,
-    //   values: (
-    //     static: static,
-    //     fixed: fixed,
-    //     absolute: absolute,
-    //     relative: relative
-    //   )
-    // ),
-    // "position-sticky": (
-    //   // responsive: true,
-    //   property: position,
-    //   class: null,
-    //   values: (
-    //     sticky: sticky
-    //   ),
-    //   property2: position,
-    //   values2: (
-    //     null: -webkit-sticky
-    //   )
-    // ),
+    // scss-docs-start utils-layout
+    "aspect-ratio":
+      (
+        // responsive: true,
+        property: aspect-ratio,
+        class: aspect,
+        values: (
+          auto: auto,
+          "square": #{"1 / 1"},
+          "default": #{"4 / 3"},
+          "video": #{"16 / 9"},
+          "portrait": #{"9 / 16"},
+          "paysage": #{"21 / 9"}
+        )
+      ),
+    "columns": (
+      // responsive: true,
+      property: columns,
+      class: columns,
+      add-css-var: content,
+      breakpoints: css-var,
+      values: 1 2 3 4 5 6 7 8 9 10 11 12
+    ),
+    "columns-grid-containers": (
+      // responsive: true,
+      property: columns,
+      class: columns,
+      add-css-var: default,
+      css-variable-name: container,
+      values: $grid-containers
+    ),
+    "box-decoration-break": (
+      property: box-decoration-break,
+      class: box-decoration,
+      values: clone slice
+    ),
+    "box-sizing": (
+      property: box-sizing,
+      class: box,
+      values: (
+        border: border-box,
+        content: content-box
+      )
+    ),
+    "display": (
+      // responsive: true,
+      // print: true,
+      class: null,
+      property: display,
+      values: (
+        inline: inline,
+        block: block,
+        inline-block: inline-block,
+        flow-root: flow-root,
+        flex: flex,
+        inline-flex: inline-flex,
+        grid: grid,
+        inline-grid: inline-grid,
+        contents: contents,
+        table: table,
+        inline-table: inline-table,
+        table-caption: table-caption,
+        table-cell: table-cell,
+        table-column: table-column,
+        table-column-group: table-column-group,
+        table-footer-group: table-footer-group,
+        table-header-group: table-header-group,
+        table-row-group: table-row-group,
+        table-row: table-row,
+        list-item: list-item,
+        hidden: none,
+      )
+    ),
+    "sr-only": (
+      // responsive: true,
+      class: sr-only,
+      property: position,
+      values: (
+        null: absolute,
+      ),
+      property2: width,
+      values2: (
+        null: 1px,
+      ),
+      property3: height,
+      values3: (
+        null: 1px,
+      ),
+      property4: padding,
+      values4: (
+        null: 0,
+      ),
+      property5: margin,
+      values5: (
+        null: -1px,
+      ),
+      property6: overflow,
+      values6: (
+        null: hidden,
+      ),
+      property7: clip,
+      values7: (
+        null: rect(0,0,0,0),
+      ),
+      property8: white-space,
+      values8: (
+        null: nowrap,
+      ),
+      property9: border-width,
+      values9: (
+        null: 0,
+      ),
+    ),
+    "not-sr-only": (
+      // responsive: true,
+      class: not-sr-only,
+      property: position,
+      values: (
+        null: static,
+      ),
+      property2: width,
+      values2: (
+        null: auto,
+      ),
+      property3: height,
+      values3: (
+        null: auto,
+      ),
+      property4: padding,
+      values4: (
+        null: 0,
+      ),
+      property5: margin,
+      values5: (
+        null: 0,
+      ),
+      property6: overflow,
+      values6: (
+        null: visible,
+      ),
+      property7: clip,
+      values7: (
+        null: auto,
+      ),
+      property8: white-space,
+      values8: (
+        null: normal,
+      ),
+    ),
+    "float": (
+      // responsive: true,
+      class: float,
+      property: float,
+      values: (
+        left: left,
+        right: right,
+        none: none,
+        start: inline-start,
+        end: inline-end,
+      )
+    ),
+    "clear": (
+      // responsive: true,
+      class: clear,
+      property: clear,
+      values: (
+        left: left,
+        right: right,
+        both: both,
+        start: inline-start,
+        end: inline-end,
+        none: none,
+      )
+    ),
+    "object-fit": (
+      // responsive: true,
+      property: object-fit,
+      class: object,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        scale: scale-down,
+        none: none
+      )
+    ),
+    "object-position": (
+      // responsive: true,
+      property: object-position,
+      class: object,
+      values: (
+        bottom: bottom,
+        center: center,
+        left: left,
+        left-bottom: left bottom,
+        left-top: left top,
+        right: right,
+        right-bottom: right bottom,
+        right-top: right top,
+        top: top
+      )
+    ),
+    "overflow": (
+      // responsive: true,
+      property: overflow,
+      class: overflow,
+      values: auto hidden visible scroll
+    ),
+    "overflow-x": (
+      // responsive: true,
+      property: overflow-x,
+      class: overflow-x,
+      values: auto hidden visible scroll
+    ),
+    "overflow-y": (
+      // responsive: true,
+      property: overflow-y,
+      class: overflow-y,
+      values: auto hidden visible scroll
+    ),
+    "overscroll-behavior": (
+      // responsive: true,
+      property: overscroll-behavior,
+      class: overscroll,
+      values: auto contain none
+    ),
+    "overscroll-behavior-y": (
+      // responsive: true,
+      property: overscroll-behavior-y,
+      class: overscroll-y,
+      values: auto contain none
+    ),
+    "overscroll-behavior-x": (
+      // responsive: true,
+      property: overscroll-behavior-x,
+      class: overscroll-x,
+      values: auto contain none
+    ),
+    "positions": (
+      // responsive: true,
+      property: position,
+      class: null,
+      values: (
+        static: static,
+        fixed: fixed,
+        absolute: absolute,
+        relative: relative
+      )
+    ),
+    "position-sticky": (
+      // responsive: true,
+      property: position,
+      class: null,
+      values: (
+        sticky: sticky
+      ),
+      property2: position,
+      values2: (
+        null: -webkit-sticky
+      )
+    ),
     "top": (
       // responsive: true,
       property: top,
@@ -275,25 +275,37 @@ $utilities: map-merge(
       function: "calc()",
       values: $spacers,
     ),
-    "bottom": (
+    "negative-top": (
       // responsive: true,
-      property: bottom,
-      class: bottom,
+      property: top,
+      class: top,
       breakpoints: css-var,
       add-css-var: content,
       css-variable-name: spacing,
       function: "calc()",
+      negative-spacing: true,
       values: $spacers,
     ),
-    "left": (
+    "top-fraction": (
       // responsive: true,
-      property: left,
-      class: left,
+      property: top,
+      class: top,
       breakpoints: css-var,
       add-css-var: content,
-      css-variable-name: spacing,
+      css-variable-name: fraction,
       function: "calc()",
-      values: $spacers,
+      values: $fractions,
+    ),
+    "negative-top-fraction": (
+      // responsive: true,
+      property: top,
+      class: top,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: fraction,
+      function: "calc()",
+      negative-spacing: true,
+      values: $fractions,
     ),
     "right": (
       // responsive: true,
@@ -305,82 +317,7 @@ $utilities: map-merge(
       function: "calc()",
       values: $spacers,
     ),
-    // system percentage
-    "top-percentage": (
-      // responsive: true,
-      property: top,
-      class: top,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: fraction,
-      function: "calc()",
-      values: $grids-percentages,
-    ),
-    "bottom-percentage": (
-      // responsive: true,
-      property: bottom,
-      class: bottom,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: fraction,
-      function: "calc()",
-      values: $grids-percentages,
-    ),
-    "left-percentage": (
-      // responsive: true,
-      property: left,
-      class: left,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: fraction,
-      function: "calc()",
-      values: $grids-percentages,
-    ),
-    "right-percentage": (
-      // responsive: true,
-      property: right,
-      class: right,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: fraction,
-      function: "calc()",
-      values: $grids-percentages,
-    ),
-    // negative position
-    "top-negatif": (
-      // responsive: true,
-      property: top,
-      class: top,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: spacing,
-      function: "calc()",
-      negative-spacing: true,
-      values: $spacers,
-    ),
-    "bottom-negatif": (
-      // responsive: true,
-      property: bottom,
-      class: bottom,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: spacing,
-      function: "calc()",
-      negative-spacing: true,
-      values: $spacers,
-    ),
-    "left-negatif": (
-      // responsive: true,
-      property: left,
-      class: left,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: spacing,
-      function: "calc()",
-      negative-spacing: true,
-      values: $spacers,
-    ),
-    "right-negatif": (
+    "negative-right": (
       // responsive: true,
       property: right,
       class: right,
@@ -391,40 +328,17 @@ $utilities: map-merge(
       negative-spacing: true,
       values: $spacers,
     ),
-    "negative-top-percentage": (
+    "right-fraction": (
       // responsive: true,
-      property: top,
-      class: top,
+      property: right,
+      class: right,
       breakpoints: css-var,
       add-css-var: content,
       css-variable-name: fraction,
       function: "calc()",
-      negative-spacing: true,
-      values: $grids-percentages,
+      values: $fractions,
     ),
-    "negative-bottom-percentage": (
-      // responsive: true,
-      property: bottom,
-      class: bottom,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: fraction,
-      function: "calc()",
-      negative-spacing: true,
-      values: $grids-percentages,
-    ),
-    "negative-left-percentage": (
-      // responsive: true,
-      property: left,
-      class: left,
-      breakpoints: css-var,
-      add-css-var: content,
-      css-variable-name: fraction,
-      function: "calc()",
-      negative-spacing: true,
-      values: $grids-percentages,
-    ),
-    "negative-right-percentage": (
+    "negative-right-fraction": (
       // responsive: true,
       property: right,
       class: right,
@@ -433,57 +347,777 @@ $utilities: map-merge(
       css-variable-name: fraction,
       function: "calc()",
       negative-spacing: true,
-      values: $grids-percentages,
+      values: $fractions,
     ),
-    // "Visibility": (
+    "bottom": (
+      // responsive: true,
+      property: bottom,
+      class: bottom,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers,
+    ),
+    "negative-bottom": (
+      // responsive: true,
+      property: bottom,
+      class: bottom,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      negative-spacing: true,
+      values: $spacers,
+    ),
+    "bottom-fraction": (
+      // responsive: true,
+      property: bottom,
+      class: bottom,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: fraction,
+      function: "calc()",
+      values: $fractions,
+    ),
+    "negative-bottom-fraction": (
+      // responsive: true,
+      property: bottom,
+      class: bottom,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: fraction,
+      function: "calc()",
+      negative-spacing: true,
+      values: $fractions,
+    ),
+    "left": (
+      // responsive: true,
+      property: left,
+      class: left,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers,
+    ),
+    "negative-left": (
+      // responsive: true,
+      property: left,
+      class: left,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      negative-spacing: true,
+      values: $spacers,
+    ),
+    "left-fraction": (
+      // responsive: true,
+      property: left,
+      class: left,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: fraction,
+      function: "calc()",
+      values: $fractions,
+    ),
+    "negative-left-fraction": (
+      // responsive: true,
+      property: left,
+      class: left,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: fraction,
+      function: "calc()",
+      negative-spacing: true,
+      values: $fractions,
+    ),
+    "Visibility": (
+      // responsive: true,
+      property: Visibility,
+      class: null,
+      values: (
+        visible: visible,
+        invisible: hidden,
+        collapse: collapse,
+      ),
+    ),
+    "z-index": (
+      // responsive: true,
+      property: z-index,
+      class: z,
+      breakpoints: css-var,
+      add-css-var: content,
+      values: $zindex-levels
+    ),
+    // scss-docs-end utils-layout
+    // scss-docs-start flexbox
+    "flex-basis": (
+      // responsive: true,
+      property: flex-basis,
+      class: basis,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers,
+    ),
+    "flex-basis-fraction": (
+      // responsive: true,
+      property: flex-basis,
+      class: basis,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: fraction,
+      function: "calc()",
+      values: $fractions,
+    ),
+    "flex-basis-containers": (
+      // responsive: true,
+      property: flex-basis,
+      class: basis,
+      add-css-var: default,
+      css-variable-name: container,
+      values: $grid-containers
+    ),
+    "flex-direction": (
+      // responsive: true,
+      property: flex-direction,
+      class: flex,
+      values: (
+        row: row,
+        row-reverse: row-reverse,
+        col: column,
+        col-reverse: column-reverse
+      )
+    ),
+    "flex-wrap": (
+      // responsive: true,
+      property: flex-wrap,
+      class: flex,
+      values: (
+        wrap: wrap,
+        wrap-reverse: wrap-reverse,
+        nowrap: nowrap
+      )
+    ),
+    "flex": (
+      // responsive: true,
+      property: flex,
+      class: flex,
+      values: (
+        auto: 1 1 auto,
+        0: 0 0 auto,
+        initial: 0 1 auto,
+        1: 1 1 0%,
+        none: none
+      )
+    ),
+    "flex-grow": (
+      // responsive: true,
+      property: flex-grow,
+      class: grow,
+      values: (
+        0: 0,
+        null: 1
+      )
+    ),
+    "flex-shrink": (
+      // responsive: true,
+      property: flex-shrink,
+      class: shrink,
+      values: (
+        0: 0,
+        null: 1
+      )
+    ),
+    "order": (
+      // responsive: true,
+      property: order,
+      class: order,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: number,
+      function: "calc()",
+      values: 1 2 3 4 5 6 7 8 9 10 11 12,
+    ),
+    // "negative-order": (
     //   // responsive: true,
-    //   property: Visibility,
-    //   class: null,
-    //   values: (
-    //     visible: visible,
-    //     invisible: hidden,
-    //     collapse: collapse,
-    //   ),
-    // ),
-    // "negative-z-index": (
-    //   // responsive: true,
-    //   property: z-index,
-    //   class: z,
+    //   property: order,
+    //   class: order,
     //   breakpoints: css-var,
     //   add-css-var: content,
+    //   css-variable-name: number,
+    //   function: "calc()",
     //   negative-spacing: true,
-    //   values: (
-    //     01: 01,
-    //     25: 25,
-    //     50: 50,
-    //     90: 90,
-    //     150: 150,
-    //   )
+    //   values: 1 2 3 4 5 6 7 8 9 10 11 12,
     // ),
-    // "z-index": (
+    "order-special": (
+      // responsive: true,
+      property: order,
+      class: order,
+      breakpoints: css-var,
+      add-css-var: content,
+      css-variable-name: number,
+      function: "calc()",
+      values: (
+        frist: -99999,
+        last:  99999,
+        none: 0,
+      ),
+    ),
+    "grid-template-columns": (
+      // responsive: true,
+      property: grid-template-columns,
+      class: grid-cols,
+      values: (
+        1: repeat(1, minmax(0, 1fr)),
+        2: repeat(2, minmax(0, 1fr)),
+        3: repeat(3, minmax(0, 1fr)),
+        4: repeat(4, minmax(0, 1fr)),
+        5: repeat(5, minmax(0, 1fr)),
+        6: repeat(6, minmax(0, 1fr)),
+        7: repeat(7, minmax(0, 1fr)),
+        8: repeat(8, minmax(0, 1fr)),
+        9: repeat(9, minmax(0, 1fr)),
+        10: repeat(10, minmax(0, 1fr)),
+        11: repeat(11, minmax(0, 1fr)),
+        12: repeat(12, minmax(0, 1fr)),
+        none: none,
+        subgrid: subgrid
+      )
+    ),
+    "grid-column": (
+      // responsive: true,
+      property: grid-column,
+      class: col,
+      values: (
+        auto: auto,
+        span-1: #{"span 1 / span 1"},
+        span-2: #{"span 2 / span 2"},
+        span-3: #{"span 3 / span 3"},
+        span-4: #{"span 4 / span 4"},
+        span-5: #{"span 5 / span 5"},
+        span-6: #{"span 6 / span 6"},
+        span-7: #{"span 7 / span 7"},
+        span-8: #{"span 8 / span 8"},
+        span-9: #{"span 9 / span 9"},
+        span-10: #{"span 10 / span 10"},
+        span-11: #{"span 11 / span 11"},
+        span-12: #{"span 12 / span 12"},
+        span-full: #{"1 / -1"}
+      )
+    ),
+    "grid-column-start-number": (
+      // responsive: true,
+      property: grid-column-start,
+      class: col-start,
+      add-css-var: content,
+      css-variable-name: number,
+      function: "calc()",
+      values: 1 2 3 4 5 6 7 8 9 10 11 12 13
+    ),
+    "grid-column-start-auto": (
+      // responsive: true,
+      property: grid-column-start,
+      class: col-start,
+      values: auto
+    ),
+    // "negative-grid-column-start-number": (
     //   // responsive: true,
-    //   property: z-index,
-    //   class: z,
-    //   breakpoints: css-var,
+    //   property: grid-column-start,
+    //   class: col-start,
     //   add-css-var: content,
-    //   values: (
-    //     01: 01,
-    //     25: 25,
-    //     50: 50,
-    //     90: 90,
-    //     150: 150,
-    //   )
+    //   css-variable-name: number,
+    //   function: "calc()",
+    //   negative-spacing: true,
+    //   values: 1 2 3 4 5 6 7 8 9 10 11 12 13
     // ),
-    // // scss-docs-end utils-layout
-    // // scss-docs-start flexbox
-    // "flex-basis-containers": (
+    "grid-column-end-number": (
+      // responsive: true,
+      property: grid-column-end,
+      class: col-end,
+      add-css-var: content,
+      css-variable-name: number,
+      function: "calc()",
+      values: 1 2 3 4 5 6 7 8 9 10 11 12 13
+    ),
+    "grid-column-end-auto": (
+      // responsive: true,
+      property: grid-column-end,
+      class: col-end,
+      values: auto
+    ),
+    // "negative-grid-column-end-number": (
     //   // responsive: true,
-    //   property: flex-basis,
-    //   class: basis,
+    //   property: grid-column-end,
+    //   class: col-end,
     //   add-css-var: content,
-    //   css-variable-name: container,
-    //   values: $grid-containers
+    //   css-variable-name: number,
+    //   function: "calc()",
+    //   negative-spacing: true,
+    //   values: 1 2 3 4 5 6 7 8 9 10 11 12 13
     // ),
+    "grid-template-rows": (
+      // responsive: true,
+      property: grid-template-rows,
+      class: grid-rows,
+      values: (
+        1: repeat(1, minmax(0, 1fr)),
+        2: repeat(2, minmax(0, 1fr)),
+        3: repeat(3, minmax(0, 1fr)),
+        4: repeat(4, minmax(0, 1fr)),
+        5: repeat(5, minmax(0, 1fr)),
+        6: repeat(6, minmax(0, 1fr)),
+        7: repeat(7, minmax(0, 1fr)),
+        8: repeat(8, minmax(0, 1fr)),
+        9: repeat(9, minmax(0, 1fr)),
+        10: repeat(10, minmax(0, 1fr)),
+        11: repeat(11, minmax(0, 1fr)),
+        12: repeat(12, minmax(0, 1fr)),
+        none: none,
+        subgrid: subgrid
+      )
+    ),
+    "grid-row": (
+      // responsive: true,
+      property: grid-row,
+      class: row,
+      values: (
+        auto: auto,
+        span-1: #{"span 1 / span 1"},
+        span-2: #{"span 2 / span 2"},
+        span-3: #{"span 3 / span 3"},
+        span-4: #{"span 4 / span 4"},
+        span-5: #{"span 5 / span 5"},
+        span-6: #{"span 6 / span 6"},
+        span-7: #{"span 7 / span 7"},
+        span-8: #{"span 8 / span 8"},
+        span-9: #{"span 9 / span 9"},
+        span-10: #{"span 10 / span 10"},
+        span-11: #{"span 11 / span 11"},
+        span-12: #{"span 12 / span 12"},
+        span-full: #{"1 / -1"}
+      )
+    ),
+    "grid-row-start-number": (
+      // responsive: true,
+      property: grid-row-start,
+      class: row-start,
+      add-css-var: content,
+      css-variable-name: number,
+      function: "calc()",
+      values: 1 2 3 4 5 6 7 8 9 10 11 12 13
+    ),
+    "grid-row-start-auto": (
+      // responsive: true,
+      property: grid-row-start,
+      class: row-start,
+      values: auto
+    ),
+    // "negative-grid-row-start-number": (
+    //   // responsive: true,
+    //   property: grid-row-start,
+    //   class: row-start,
+    //   add-css-var: content,
+    //   css-variable-name: number,
+    //   function: "calc()",
+    //   negative-spacing: true,
+    //   values: 1 2 3 4 5 6 7 8 9 10 11 12 13
+    // ),
+    "grid-row-end-number": (
+      // responsive: true,
+      property: grid-row-end,
+      class: row-end,
+      add-css-var: content,
+      css-variable-name: number,
+      function: "calc()",
+      values: 1 2 3 4 5 6 7 8 9 10 11 12 13
+    ),
+    "grid-row-end-auto": (
+      // responsive: true,
+      property: grid-row-end,
+      class: row-end,
+      values: auto
+    ),
+    // "negative-grid-row-end-number": (
+    //   // responsive: true,
+    //   property: grid-row-end,
+    //   class: row-end,
+    //   add-css-var: content,
+    //   css-variable-name: number,
+    //   function: "calc()",
+    //   negative-spacing: true,
+    //   values: 1 2 3 4 5 6 7 8 9 10 11 12 13
+    // ),
+    "grid-auto-flow": (
+      // responsive: true,
+      property: grid-auto-flow,
+      class: grid-flow,
+      values: (
+        row: row,
+        column: column,
+        dense: dense,
+        row-dense: row dense,
+        column-dense: column dense
+      )
+    ),
+    "grid-auto-columns": (
+      // responsive: true,
+      property: grid-auto-columns,
+      class: auto-cols,
+      values: (
+        auto: auto,
+        min: min-content,
+        max: max-content,
+        fr: minmax(0, 1fr)
+      )
+    ),
+    "grid-auto-rows": (
+      // responsive: true,
+      property: grid-auto-rows,
+      class: auto-rows,
+      values: (
+        auto: auto,
+        min: min-content,
+        max: max-content,
+        fr: minmax(0, 1fr)
+      )
+    ),
+    "gap": (
+      // responsive: true,
+      property: gap,
+      class: gap,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "gap-x": (
+      // responsive: true,
+      property: column-gap,
+      class: gap-x,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "gap-y": (
+      // responsive: true,
+      property: row-gap,
+      class: gap-y,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "justify-content": (
+      // responsive: true,
+      property: justify-content,
+      class: justify,
+      values: (
+        normal: normal,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly,
+        stretch: stretch
+      )
+    ),
+    "justify-items": (
+      // responsive: true,
+      property: justify-items,
+      class: justify-items,
+      values: (
+        start: start,
+        end: end,
+        center: center,
+        stretch: stretch
+      )
+    ),
+    "justify-self": (
+      // responsive: true,
+      property: justify-self,
+      class: justify-self,
+      values: (
+        start: start,
+        end: end,
+        center: center,
+        stretch: stretch,
+        auto: auto
+      )
+    ),
+    "align-content": (
+      // responsive: true,
+      property: align-content,
+      class: content,
+      values: (
+        normal: normal,
+        center: center,
+        start: flex-start,
+        end: flex-end,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly,
+        baseline: baseline,
+        stretch: stretch
+      )
+    ),
+    "align-items": (
+      // responsive: true,
+      property: align-items,
+      class: items,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        baseline: baseline,
+        stretch: stretch
+      )
+    ),
+    "align-self": (
+      // responsive: true,
+      property: align-self,
+      class: self,
+      values: (
+        auto: auto,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        stretch: stretch,
+        baseline: baseline
+      )
+    ),
+    "place-content": (
+      // responsive: true,
+      property: place-content,
+      class: place-content,
+      values: (
+        center: center,
+        start: start,
+        end: end,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly,
+        baseline: baseline,
+        stretch: stretch
+      )
+    ),
+    "place-items": (
+      // responsive: true,
+      property: place-items,
+      class: place-items,
+      values: (
+        start: start,
+        end: end,
+        center: center,
+        baseline: baseline,
+        stretch: stretch
+      )
+    ),
+    "place-self": (
+      // responsive: true,
+      property: place-self,
+      class: place-self,
+      values: (
+        start: start,
+        end: end,
+        center: center,
+        stretch: stretch,
+        baseline: baseline
+      )
+    ),
+    // scss-docs-end flexbox
+    // scss-docs-start spacing
+    "padding":(
+      // responsive: true,
+      property: padding,
+      class: p,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "padding-x":(
+      // responsive: true,
+      property: padding-inline,
+      class: px,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "padding-y":(
+      // responsive: true,
+      property: padding-block,
+      class: py,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "padding-inline-start":(
+      // responsive: true,
+      property: padding-inline-start,
+      class: ps,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "padding-inline-end":(
+      // responsive: true,
+      property: padding-inline-end,
+      class: pe,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "padding-top":(
+      // responsive: true,
+      property: padding-top,
+      class: pt,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "padding-right":(
+      // responsive: true,
+      property: padding-right,
+      class: pr,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "padding-bottom":(
+      // responsive: true,
+      property: padding-bottom,
+      class: pb,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "padding-left":(
+      // responsive: true,
+      property: padding-left,
+      class: pl,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+
+
+    
+    "margin":(
+      // responsive: true,
+      property: margin,
+      class: m,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "margin-x":(
+      // responsive: true,
+      property: margin-inline,
+      class: mx,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "margin-y":(
+      // responsive: true,
+      property: margin-block,
+      class: my,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "margin-inline-start":(
+      // responsive: true,
+      property: margin-inline-start,
+      class: ms,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "margin-inline-end":(
+      // responsive: true,
+      property: margin-inline-end,
+      class: me,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "margin-top":(
+      // responsive: true,
+      property: margin-top,
+      class: mt,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "margin-right":(
+      // responsive: true,
+      property: margin-right,
+      class: mr,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "margin-bottom":(
+      // responsive: true,
+      property: margin-bottom,
+      class: mb,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "margin-left":(
+      // responsive: true,
+      property: margin-left,
+      class: ml,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    // scss-docs-end spacing
+    // scss-docs-start sizing
+    "width-spacing":(
+      // responsive: true,
+      property: width,
+      class: w,
+      add-css-var: content,
+      css-variable-name: spacing,
+      function: "calc()",
+      values: $spacers
+    ),
+    "width-container":(
+      // responsive: true,
+      property: width,
+      class: w,
+      add-css-var: default,
+      css-variable-name: contaier,
+      function: "calc()",
+      values: $grid-containers
+    ),
+
   ),
   $utilities
 );
