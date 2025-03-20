@@ -1,0 +1,51 @@
+.skeleton {
+  display: inline-block;
+  min-height: 1em;
+  vertical-align: middle;
+  cursor: wait;
+  background-color: currentcolor;
+  opacity: $skeleton-opacity-max;
+
+  &.btn::before {
+    display: inline-block;
+    content: "";
+  }
+}
+
+// Sizing
+.skeleton-xs {
+  min-height: .6em;
+}
+
+.skeleton-sm {
+  min-height: .8em;
+}
+
+.skeleton-lg {
+  min-height: 1.2em;
+}
+
+// Animation
+.skeleton-glow {
+  .skeleton {
+    animation: skeleton-glow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes skeleton-glow {
+  50% {
+    opacity: $skeleton-opacity-min;
+  }
+}
+
+.skeleton-wave {
+  mask-image: linear-gradient(130deg, $black 55%, rgba(0, 0, 0, (1 - $skeleton-opacity-min)) 75%, $black 95%);
+  mask-size: 200% 100%;
+  animation: skeleton-wave 2s linear infinite;
+}
+
+@keyframes skeleton-wave {
+  100% {
+    mask-position: -200% 0%;
+  }
+}

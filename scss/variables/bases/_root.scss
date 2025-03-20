@@ -11,8 +11,8 @@ $prefix: --#{$variable-prefix} !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:         1 !default;
-$grid-spacer:    1 !default;
+$spacer:         1rem !default;
+$grid-spacer:    1rem !default;
 // scss-docs-start spacer-variables-maps
 $spacers: (
   0: 0,
