@@ -12,5 +12,10 @@
 @import "mixins/color-mode";
 @import "mixins/color-scheme";
 
+
+// Skins
+@import "mixins/border-radius";
+@import "mixins/gradients";
+
 // utilities
 @import "mixins/utilities";
