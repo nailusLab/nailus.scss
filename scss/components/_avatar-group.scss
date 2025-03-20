@@ -1,0 +1,13 @@
+.avatar-group {
+    #{$prefix}margin-left: #{$avatar-group-margin};
+    display: flex;
+    align-items: center;
+
+    .avatar {
+        margin-left: var(#{$prefix}margin-left);
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+
+// Documentation for Avatar Component
+// ----------------------------------
+// The `.avatar` class is used to style avatar elements with customizable 
+// properties such as size, border, background color, and position. 
+// It supports responsive design and additional modifiers for different 
+// avatar sizes and styles.
+//
+// Variables:
+// - `$prefix`: Prefix for CSS custom properties (e.g., `--`).
+// - `$avatar-border-color`: Border color of the avatar.
+// - `$avatar-border-width`: Border width of the avatar.
+// - `$avatar-bg-color`: Background color of the avatar.
+// - `$avatar-size`: Base size of the avatar.
+// - `$avatar-border-radius`: Border radius for rounded avatars.
+// - `$avatar-position`: Positioning of the avatar.
+// - `$status-size`: Base size of the status indicator.
+// - `$status-border-color`: Border color of the status indicator.
+// - `$status-online-color`: Background color for the online status indicator.
+//
+// Structure:
+// - `.avatar`: Base class for the avatar component.
+//   - Uses CSS custom properties for dynamic styling.
+//   - Includes styles for size, border, background color, and positioning.
+//   - Contains an optional `img` element for avatar images.
+//
+// - `.status`: Nested class for the status indicator.
+//   - Positioned absolutely within the avatar.
+//   - Supports dynamic sizing and colors for online status.
+//
+// Modifiers:
+// - `.avatar-full`: Adds rounded corners to the avatar and adjusts the status position.
+// - `.avatar-sm`: Smaller avatar size with adjusted status size and position.
+// - `.avatar-lg`: Larger avatar size with adjusted status size and position.
+//
+// Responsive Modifiers:
+// - `.avatar-sm.avatar-full`: Combines small size with rounded corners and adjusted status.
+// - `.avatar-lg.avatar-full`: Combines large size with rounded corners and adjusted status.
+//
+// Notes:
+// - The component uses `calc()` for dynamic sizing based on the `$avatar-size` and `$status-size` variables.
+// - Ensure that the `$prefix` variable is defined to avoid issues with custom properties.
+// - The `.status` class is optional and can be omitted if no status indicator is needed.
+.avatar {
+    #{$prefix}border-color: $avatar-border-color;
+    #{$prefix}border-width: $avatar-border-width;
+    #{$prefix}bg-color: $avatar-bg-color;
+    #{$prefix}size: $avatar-size;
+    #{$prefix}avatar-size: calc(var(#{$prefix}size) * 3);
+
+    display: inline-block;
+    position: $avatar-position;
+    border: var(#{$prefix}border-width) solid var(#{$prefix}border-color);
+    background-color: var(#{$prefix}bg-color);
+    width: var(#{$prefix}avatar-size);
+    height: var(#{$prefix}avatar-size);
+
+    & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .status {
+        #{$prefix}right:  0rem;
+        #{$prefix}bottom: 0rem;
+        #{$prefix}status-size: calc($status-size * 1.25rem);
+
+        position: absolute;
+        bottom: var(#{#{$prefix}bottom});
+        right:  var(#{#{$prefix}right});
+        width: var(#{$prefix}status-size);
+        height: var(#{$prefix}status-size);
+        
+        border: 2px solid $status-border-color;
+        border-radius: 50%;
+        background-color: $status-online-color;
+        overflow: hidden;
+    }
+
+    &.avatar-full, &.avatar-full img {
+        border-radius: $avatar-border-radius;
+
+        .status {
+            #{$prefix}right:  .15rem;
+            #{$prefix}bottom: .15rem;
+            #{$prefix}status-size: calc($status-size * 1.25rem);
+        }
+    }
+
+    &.avatar-sm {
+        #{$prefix}avatar-size: calc(var(#{$prefix}size) * 2);
+        
+        .status {
+            #{$prefix}status-size: calc($status-size * 1rem);
+        }
+
+        &.avatar-full {
+            border-radius: $avatar-border-radius;
+    
+            .status {
+                #{$prefix}right:  .10rem;
+                #{$prefix}bottom: .10rem;
+                #{$prefix}status-size: calc($status-size * 1rem);
+            }
+        }
+    }
+
+    &.avatar-lg {
+        #{$prefix}avatar-size: calc(var(#{$prefix}size) * 4);
+        
+        .status {
+            #{$prefix}status-size: calc($status-size * 1.5rem);
+        }
+
+        &.avatar-full {
+            border-radius: $avatar-border-radius;
+    
+            .status {
+                #{$prefix}right:  .25rem;
+                #{$prefix}bottom: .25rem;
+                #{$prefix}status-size: calc($status-size * 1.5rem);
+            }
+        }
+    }
+}

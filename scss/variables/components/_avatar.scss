@@ -1,0 +1,65 @@
+/// Variables for avatar component styling.
+/// These variables define the default styles for avatar components, such as position, border, background color, and size.
+/// They can be overridden to customize the appearance of avatars.
+
+/// Positioning of the avatar component.
+/// Default value: `relative`.
+$avatar-position: relative !default;
+
+/// Border color for the avatar component.
+/// Default value: `transparent`.
+$avatar-border-color: transparent !default;
+
+/// Border width for the avatar component.
+/// Default value: `0px`.
+$avatar-border-width: 0px !default;
+
+/// Border radius for the avatar component, typically used to create circular avatars.
+/// Default value: `50%`.
+$avatar-border-radius: 50% !default;
+
+/// Background color for the avatar component.
+/// Default value: `#fff`.
+$avatar-bg-color: #fff !default;
+
+/// Default size for avatar components.
+/// This variable defines the size of the avatar, which can be overridden if needed.
+/// Default value: `1rem`.
+$avatar-size: 1rem !default;
+
+/// Variables for status indicator styling.
+/// These variables define the default styles for status indicators, such as size, border color, and status colors.
+/// They can be overridden to customize the appearance of status indicators.
+
+/// Size of the status indicator relative to the avatar size.
+/// Default value: `0.5`.
+$status-size: 0.5 !default;
+
+/// Border color for the status indicator.
+/// Default value: `#ffffff`.
+$status-border-color: #ffffff !default;
+
+/// Color for the "online" status indicator.
+/// Default value: `#4caf50`.
+$status-online-color: #4caf50 !default;
+
+/// Color for the "offline" status indicator.
+/// Default value: `#f44336`.
+$status-offline-color: #f44336 !default;
+
+/// Color for the "busy" status indicator.
+/// Default value: `#ff9800`.
+$status-busy-color: #ff9800 !default;
+
+$avatar-position: relative !default;
+$avatar-border-color: transparent !default;
+$avatar-border-width: 0px !default;
+$avatar-border-radius: 50% !default;
+$avatar-bg-color: #fff !default;
+$avatar-size: 1rem !default;
+
+$status-size: 0.5 !default;
+$status-border-color: #ffffff !default;
+$status-online-color: #4caf50 !default;
+$status-offline-color: #f44336 !default;
+$status-busy-color: #ff9800 !default;
