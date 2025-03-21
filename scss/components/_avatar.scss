@@ -1,9 +1,8 @@
-
 // Documentation for Avatar Component
 // ----------------------------------
-// The `.avatar` class is used to style avatar elements with customizable 
-// properties such as size, border, background color, and position. 
-// It supports responsive design and additional modifiers for different 
+// The `.avatar` class is used to style avatar elements with customizable
+// properties such as size, border, background color, and position.
+// It supports responsive design and additional modifiers for different
 // avatar sizes and styles.
 //
 // Variables:
@@ -42,9 +41,8 @@
 // - Ensure that the `$prefix` variable is defined to avoid issues with custom properties.
 // - The `.status` class is optional and can be omitted if no status indicator is needed.
 .avatar {
-    #{$prefix}border-color: $avatar-border-color;
+    #{$prefix}bg-color: var(#{$prefix}body-bg);
     #{$prefix}border-width: $avatar-border-width;
-    #{$prefix}bg-color: $avatar-bg-color;
     #{$prefix}size: $avatar-size;
     #{$prefix}avatar-size: calc(var(#{$prefix}size) * 3);
 
@@ -54,73 +52,43 @@
     background-color: var(#{$prefix}bg-color);
     width: var(#{$prefix}avatar-size);
     height: var(#{$prefix}avatar-size);
-
-    & img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
-    .status {
-        #{$prefix}right:  0rem;
-        #{$prefix}bottom: 0rem;
-        #{$prefix}status-size: calc($status-size * 1.25rem);
-
-        position: absolute;
-        bottom: var(#{#{$prefix}bottom});
-        right:  var(#{#{$prefix}right});
-        width: var(#{$prefix}status-size);
-        height: var(#{$prefix}status-size);
-        
-        border: 2px solid $status-border-color;
-        border-radius: 50%;
-        background-color: $status-online-color;
-        overflow: hidden;
-    }
-
-    &.avatar-full, &.avatar-full img {
-        border-radius: $avatar-border-radius;
-
-        .status {
-            #{$prefix}right:  .15rem;
-            #{$prefix}bottom: .15rem;
-            #{$prefix}status-size: calc($status-size * 1.25rem);
-        }
-    }
+    @include border-radius(var(#{$prefix}rounded-sm));
 
     &.avatar-sm {
         #{$prefix}avatar-size: calc(var(#{$prefix}size) * 2);
-        
-        .status {
-            #{$prefix}status-size: calc($status-size * 1rem);
-        }
+    }
 
-        &.avatar-full {
-            border-radius: $avatar-border-radius;
-    
-            .status {
-                #{$prefix}right:  .10rem;
-                #{$prefix}bottom: .10rem;
-                #{$prefix}status-size: calc($status-size * 1rem);
-            }
-        }
+    &.avatar-md {
+        #{$prefix}avatar-size: calc(var(#{$prefix}size) * 2.5);
     }
 
     &.avatar-lg {
         #{$prefix}avatar-size: calc(var(#{$prefix}size) * 4);
-        
-        .status {
-            #{$prefix}status-size: calc($status-size * 1.5rem);
-        }
+    }
 
-        &.avatar-full {
-            border-radius: $avatar-border-radius;
-    
-            .status {
-                #{$prefix}right:  .25rem;
-                #{$prefix}bottom: .25rem;
-                #{$prefix}status-size: calc($status-size * 1.5rem);
-            }
-        }
+    &.avatar-xl {
+        #{$prefix}avatar-size: calc(var(#{$prefix}size) * 5);
+    }
+
+    &.avatar-xxl {
+        #{$prefix}avatar-size: calc(var(#{$prefix}size) * 6);
+    }
+
+    & img {
+        border-radius: var(#{$prefix}rounded-full);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &.avatar-text {
+        #{$prefix}border-width: 1px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
+        border-radius: var(#{$prefix}rounded-full);
+        color: var(#{$prefix}body-color);
     }
 }

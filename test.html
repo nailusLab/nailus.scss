@@ -111,13 +111,13 @@
         --ns-border-style: solid;
         --ns-border-color: #dee2e6;
         --ns-border-color-translucent: rgba(0, 0, 0, 0.175);
-        --ns-border-radius: 0.375rem;
-        --ns-border-radius-sm: 0.25rem;
-        --ns-border-radius-lg: 0.5rem;
-        --ns-border-radius-xl: 1rem;
-        --ns-border-radius-xxl: 2rem;
-        --ns-border-radius-2xl: var(--ns-border-radius-xxl);
-        --ns-border-radius-pill: 50rem;
+        --ns-rounded: 0.375rem;
+        --ns-rounded-sm: 0.25rem;
+        --ns-rounded-lg: 0.5rem;
+        --ns-rounded-xl: 1rem;
+        --ns-rounded-xxl: 2rem;
+        --ns-rounded-2xl: var(--ns-rounded-xxl);
+        --ns-rounded-full: 50rem;
         --ns-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         --ns-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
         --ns-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
@@ -770,7 +770,7 @@
         padding: 0.25rem;
         background-color: var(--ns-body-bg);
         border: var(--ns-border-width) solid var(--ns-border-color);
-        border-radius: var(--ns-border-radius);
+        border-radius: var(--ns-rounded);
         max-width: 100%;
         height: auto;
     }
@@ -791,110 +791,145 @@
 </style>
 
 <body data-bs-theme="dark">
+    <div class="rating">
+        <div class="rating-stars">
+            <input type="radio" name="rating" id="rating-1" class="rating-input rating-input-1" value="1">
+            <input type="radio" name="rating" id="rating-2" class="rating-input rating-input-2" value="2">
+            <input type="radio" name="rating" id="rating-3" class="rating-input rating-input-3" value="3">
+            <input type="radio" name="rating" id="rating-4" class="rating-input rating-input-4" value="4">
+            <input type="radio" name="rating" id="rating-5" class="rating-input rating-input-5" value="5">
 
-    <div class="progress progress-vertical" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
-        aria-valuemax="100">
-        <div class="progress-bar progress-bar-striped bg-success" style="height: 50%;">50</div>
-    </div>
+            <label class="rating-label" for="rating-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="rating-star"
+                    viewBox="0 0 16 16">
+                    <path class="rating-stroke rating-star-stroke"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
 
-    <br>
+                    <path class="rating-fill rating-star-fill"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
 
-    <div class="progress-stacked">
-        <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0"
-            aria-valuemax="100" style="width: 15%;">
-            <div class="progress-bar progress-bar-striped">15%</div>
-        </div>
-        <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0"
-            aria-valuemax="100" style="width: 30%;">
-            <div class="progress-bar progress-bar-striped bg-success">30%</div>
-        </div>
-        <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0"
-            aria-valuemax="100" style="width: 20%;">
-            <div class="progress-bar progress-bar-striped bg-info">20%</div>
-        </div>
-    </div>
+                    <g>
+                        <g transform="translate(16,16)" stroke-dasharray="12 12" stroke-dashoffset="12">
+                            <polyline class="rating-star-line" transform="rotate(0)" points="0 4,0 16" />
+                            <polyline class="rating-star-line" transform="rotate(72)" points="0 4,0 16" />
+                            <polyline class="rating-star-line" transform="rotate(144)" points="0 4,0 16" />
+                            <polyline class="rating-star-line" transform="rotate(216)" points="0 4,0 16" />
+                            <polyline class="rating-star-line" transform="rotate(288)" points="0 4,0 16" />
+                        </g>
+                    </g>
 
-    <br>
+                </svg>
+            </label>
 
-    <div class="progress-stacked">
-        <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0"
-            aria-valuemax="100" style="--ns-progress-width: 15%;">
-            <div class="progress-bar progress-bar-striped">15%</div>
-        </div>
-        <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0"
-            aria-valuemax="100" style="--ns-progress-width: 30%;">
-            <div class="progress-bar progress-bar-striped bg-success">30%</div>
-        </div>
-        <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0"
-            aria-valuemax="100" style="--ns-progress-width: 20%;">
-            <div class="progress-bar progress-bar-striped bg-info">20%</div>
-        </div>
-    </div>
+            <label class="rating-label" for="rating-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="rating-star"
+                    viewBox="0 0 16 16">
+                    <path class="rating-stroke rating-star-stroke"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
 
-    <div class="alert alert-success alert-dismissible" role="alert">
-        <h1>Hello world</h1>
-        <button class="btn-close btn btn-warning">
-            &times;
-        </button>
-    </div>
+                    <path class="rating-fill rating-star-fill"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
 
-    <button class="btn btn-primary">primary</button>
-    <button class="btn btn-secondary">secondary</button>
-    <button class="btn btn-info">info</button>
-    <button class="btn btn-success">success</button>
-    <button class="btn btn-warning">warning</button>
-    <button class="btn btn-danger">danger</button>
-    <button class="btn btn-light">light</button>
-    <button class="btn btn-dark">dark</button>
+                </svg>
+            </label>
 
-    <br> <br>
+            <label class="rating-label" for="rating-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="rating-star"
+                    viewBox="0 0 16 16">
+                    <path class="rating-stroke rating-star-stroke"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
 
-    <button class="btn btn-outline-primary">primary</button>
-    <button class="btn btn-outline-secondary">secondary</button>
-    <button class="btn btn-outline-info">info</button>
-    <button class="btn btn-outline-success">success</button>
-    <button class="btn btn-outline-warning">warning</button>
-    <button class="btn btn-outline-danger">danger</button>
-    <button class="btn btn-outline-light">light</button>
-    <button class="btn btn-outline-dark">dark</button>
+                    <path class="rating-fill rating-star-fill"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
 
-    <div class="card" style="width: 18rem;">
-        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-            class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
+                </svg>
+            </label>
 
-    <div class="card text-center">
-        <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="true" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <label class="rating-label" for="rating-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="rating-star"
+                    viewBox="0 0 16 16">
+                    <path class="rating-stroke rating-star-stroke"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+
+                    <path class="rating-fill rating-star-fill"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+
+                </svg>
+            </label>
+
+            <label class="rating-label" for="rating-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="rating-star"
+                    viewBox="0 0 16 16">
+                    <path class="rating-stroke rating-star-stroke"
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+
+                    <path class="rating-fill rating-star-fill"
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+
+                </svg>
+            </label>
         </div>
     </div>
 
+    <div class="avatar-group">
+        <img class="avatar"
+        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+        alt="Avatar">
+    <img class="avatar avatar-sm"
+        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+        alt="Avatar">
+    <img class="avatar avatar-lg"
+        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+        alt="Avatar">
+    <img class="avatar avatar-sm"
+        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+        alt="Avatar">
+    </div>
 
+    <div class="avatar">
+        <img class="inline-block size-8 rounded-full"
+            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+            alt="Avatar">
+        <span class="status size-1.5 rounded-full ring-2 ring-white bg-gray-400 dark:ring-neutral-900"></span>
+    </div>
+    <div class="avatar">
+        <img class="inline-block size-9.5 rounded-full"
+            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+            alt="Avatar">
+        <span class="status size-2.5 rounded-full ring-2 ring-white bg-red-400 dark:ring-neutral-900"></span>
+    </div>
+    <div class="avatar avatar-sm">
+        <img class="inline-block size-11 rounded-full"
+            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+            alt="Avatar">
+        <span class="status size-3 rounded-full ring-2 ring-white bg-teal-400 dark:ring-neutral-900"></span>
+    </div>
+    <div class="avatar avatar-md">
+        <img class="inline-block size-15.5 rounded-full"
+            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+            alt="Avatar">
+        <span class="status size-3.5 rounded-full ring-2 ring-white bg-yellow-400 dark:ring-neutral-900"></span>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <span
+        class="avatar avatar-text avatar-xl size-8 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
+        AC
+    </span>
+
+    <span
+        class="avatar avatar-text avatar-xl size-9.5 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
+        AC
+    </span>
+
+    <span
+        class="avatar avatar-text avatar-xl size-11 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
+        AC
+    </span>
+
+    <span
+        class="avatar avatar-text avatar-xl size-15.5 font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
+        AC
+    </span>
 </body>
 
 </html>

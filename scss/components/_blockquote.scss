@@ -1,0 +1,34 @@
+// Documentation for Blockquotes SCSS Component
+
+// .blockquote
+// Styles for blockquote elements.
+// - Adds bottom margin using `$blockquote-margin-y`.
+// - Applies font size using the `$blockquote-font-size` variable.
+// - Ensures the last child element inside the blockquote has no bottom margin.
+
+// .blockquote-footer
+// Styles for the footer of blockquote elements.
+// - Adjusts top and bottom margins using `$blockquote-margin-y`.
+// - Applies font size using the `$blockquote-footer-font-size` variable.
+// - Sets the text color using `$blockquote-footer-color`.
+// - Adds a decorative em dash and non-breaking space before the content using `::before`.
+// Blockquotes
+.blockquote {
+    margin-bottom: $blockquote-margin-y;
+    @include font-size($blockquote-font-size);
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.blockquote-footer {
+    margin-top: -$blockquote-margin-y;
+    margin-bottom: $blockquote-margin-y;
+    @include font-size($blockquote-footer-font-size);
+    color: $blockquote-footer-color;
+
+    &::before {
+        content: "\2014\00A0"; // em dash, nbsp
+    }
+}
