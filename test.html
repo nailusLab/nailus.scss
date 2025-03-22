@@ -491,7 +491,7 @@
     }
 
     button:focus:not(:focus-visible) {
-        outline: 0;
+        ghost: 0;
     }
 
     input,
@@ -591,7 +591,7 @@
 
     [type=search] {
         -webkit-appearance: textfield;
-        outline-offset: -2px;
+        ghost-offset: -2px;
     }
 
     /* rtl:raw:
@@ -871,65 +871,87 @@
         </div>
     </div>
 
-    <div class="avatar-group">
-        <img class="avatar"
-        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-        alt="Avatar">
-    <img class="avatar avatar-sm"
-        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-        alt="Avatar">
-    <img class="avatar avatar-lg"
-        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-        alt="Avatar">
-    <img class="avatar avatar-sm"
-        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-        alt="Avatar">
-    </div>
+    <button type="button" class="btn btn-lg btn-primary disabled">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-secondary">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-info">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-success">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-danger">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-warning">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-light">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-dark">
+        Button
+    </button>
 
-    <div class="avatar">
-        <img class="inline-block size-8 rounded-full"
-            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-            alt="Avatar">
-        <span class="status size-1.5 rounded-full ring-2 ring-white bg-gray-400 dark:ring-neutral-900"></span>
-    </div>
-    <div class="avatar">
-        <img class="inline-block size-9.5 rounded-full"
-            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-            alt="Avatar">
-        <span class="status size-2.5 rounded-full ring-2 ring-white bg-red-400 dark:ring-neutral-900"></span>
-    </div>
-    <div class="avatar avatar-sm">
-        <img class="inline-block size-11 rounded-full"
-            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-            alt="Avatar">
-        <span class="status size-3 rounded-full ring-2 ring-white bg-teal-400 dark:ring-neutral-900"></span>
-    </div>
-    <div class="avatar avatar-md">
-        <img class="inline-block size-15.5 rounded-full"
-            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-            alt="Avatar">
-        <span class="status size-3.5 rounded-full ring-2 ring-white bg-yellow-400 dark:ring-neutral-900"></span>
-    </div>
+    <br> <br>
 
-    <span
-        class="avatar avatar-text avatar-xl size-8 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
-        AC
-    </span>
+    <button type="button" class="btn btn-lg btn-ghost-primary">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-ghost-secondary">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-ghost-info">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-ghost-success">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-ghost-danger">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-ghost-warning">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-ghost-light">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-ghost-dark">
+        Button
+    </button>
 
-    <span
-        class="avatar avatar-text avatar-xl size-9.5 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
-        AC
-    </span>
+    <br> <br>
 
-    <span
-        class="avatar avatar-text avatar-xl size-11 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
-        AC
-    </span>
+    <button type="button" class="btn btn-lg btn-outline-primary">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-outline-secondary">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-outline-info">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-outline-success">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-outline-danger">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-outline-warning">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-outline-light">
+        Button
+    </button>
+    <button type="button" class="btn btn-lg btn-outline-dark">
+        Button
+    </button>
 
-    <span
-        class="avatar avatar-text avatar-xl size-15.5 font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
-        AC
-    </span>
+    <br> <br>
+
 </body>
 
 </html>
