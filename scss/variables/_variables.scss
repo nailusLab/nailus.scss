@@ -1,17 +1,9 @@
-// nailus.scss variables
-//
-// Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
-
-// Color system
-
-// scss-docs-start color-variables
 @import "colors/ambers";
 @import "colors/blues";
 @import "colors/cyans";
 @import "colors/emeralds";
 @import "colors/fushias";
-@import "colors/grays";
+// @import "colors/grays";
 @import "colors/greens";
 @import "colors/indingos";
 @import "colors/limes";
@@ -29,91 +21,6 @@
 @import "colors/yellows";
 @import "colors/zincs";
 @import "colors/default";
-// scss-docs-end color-variables
 
-// scss-docs-start base
 @import "bases/root";
 @import "bases/enables";
-// scss-docs-end base
-
-// nailus.scss components
-//
-// scss-docs-start components-stack
-@import "components/accordion";
-@import "components/alerts";
-@import "components/avatar";
-@import "components/avatar-group";
-@import "components/badge";
-@import "components/blockquote";
-@import "components/buttons";
-@import "components/button-group";
-@import "components/card";
-@import "components/chat-bubbles";
-@import "components/carousel";
-@import "components/collapse";
-@import "components/datepicker";
-@import "components/devices";
-@import "components/lists";
-@import "components/list-group";
-@import "components/close";
-@import "components/legend-indicator";
-@import "components/progress";
-@import "components/file-upload-progress";
-@import "components/rating";
-@import "components/skeleton";
-@import "components/spinners";
-@import "components/styled-icons";
-@import "components/toast";
-@import "components/timeline";
-@import "components/tree-view";
-//
-// Navigations Components
-@import "components/navbar";
-@import "components/mega-menu";
-@import "components/navs";
-@import "components/tabs";
-@import "components/sidebar";
-@import "components/scrollspy";
-@import "components/breadcrumb";
-@import "components/pagination";
-@import "components/stepper";
-//
-// Basic forms Components
-@import "components/input";
-@import "components/input-group";
-@import "components/textarea";
-@import "components/file-input";
-@import "components/checkbox";
-@import "components/radio";
-@import "components/switch";
-@import "components/select";
-@import "components/range-slider";
-@import "components/color-picker";
-@import "components/timepicker";
-//
-// Advanced forms Components
-@import "components/advanced-select";
-@import "components/comboBox";
-@import "components/searchBox";
-@import "components/input-number";
-@import "components/strong-password";
-@import "components/toggle-password";
-@import "components/toggle-count";
-@import "components/copy-markup";
-@import "components/pin-input";
-//
-// Overlays Components
-@import "components/dropdown";
-@import "components/context-menu";
-@import "components/modal";
-@import "components/offcanvas";
-@import "components/popover";
-@import "components/tooltip";
-//
-// tables Components
-@import "components/tables";
-// scss-docs-end components-stack
-
-// scss-docs-start utilities
-@import "utilities/typography";
-// scss-docs-end utilities

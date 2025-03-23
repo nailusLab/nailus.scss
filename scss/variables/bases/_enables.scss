@@ -1,7 +1,20 @@
-// Options
+// _enables.scss
+// This file contains utility classes and mixins for enabling or disabling 
+// specific CSS properties or behaviors. It is designed to provide a 
+// consistent and reusable approach to toggling features across the project.
 //
-// Quickly modify global styling by enabling or disabling optional features.
-
+// The utilities in this file may include:
+// - Classes for enabling or disabling specific styles (e.g., visibility, pointer events).
+// - Mixins for conditional application of styles based on feature flags or conditions.
+//
+// Usage:
+// - Import this file into your main SCSS file or specific components where needed.
+// - Apply the utility classes or use the mixins to control the desired behavior.
+//
+// Note:
+// - Ensure that the naming conventions used in this file align with the project's 
+//   overall CSS architecture and guidelines.
+// - Test the utilities thoroughly to avoid unintended side effects.
 $enable-caret:                true !default;
 $enable-rounded:              true !default;
 $enable-shadows:              false !default;
@@ -15,9 +28,10 @@ $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  true !default;
 $enable-validation-icons:     true !default;
-$enable-negative-spacings:    true !default;
+$enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
+$enable-light-mode:           true !default;
 $enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`

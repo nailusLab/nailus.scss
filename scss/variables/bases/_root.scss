@@ -1,8 +1,6 @@
 // Prefix for :root CSS variables
 
 $variable-prefix: ns- !default;
-
-// prefix for :root
 $prefix: --#{$variable-prefix} !default;
 
 // Spacing
@@ -11,171 +9,240 @@ $prefix: --#{$variable-prefix} !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:         1rem !default;
-$grid-spacer:    1rem !default;
 // scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer * 0.75,
-  4: $spacer * 1,
-  8: $spacer * 2,
-  12: $spacer * 3,
-  16: $spacer * 4,
-  24: $spacer * 6,
-  40: $spacer * 10,
-  96: $spacer * 24
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
 ) !default;
 // scss-docs-end spacer-variables-maps
-
-
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
-
-// scss-docs-start grid-breakpoints
-$grid-breakpoint-xs:       0 !default;
-$grid-breakpoint-sm:   576px !default;
-$grid-breakpoint-md:   768px !default;
-$grid-breakpoint-lg:   992px !default;
-$grid-breakpoint-xl:  1200px !default;
-$grid-breakpoint-xxl: 1400px !default;
-$grid-breakpoints: (
-    xs:  $grid-breakpoint-xs,
-    sm:  $grid-breakpoint-sm,
-    md:  $grid-breakpoint-md,
-    lg:  $grid-breakpoint-lg,
-    xl:  $grid-breakpoint-xl,
-    xxl: $grid-breakpoint-xxl,
-) !default;
-// scss-docs-start grid-breakpoints
-
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-// scss-docs-start grid-container-max-widths
-$grid-container-sm:   540px !default;
-$grid-container-md:   720px !default;
-$grid-container-lg:   960px !default;
-$grid-container-xl:  1140px !default;
-$grid-container-xxl: 1320px !default;
-$grid-container-max-widths: (
-    sm:  $grid-container-sm,
-    md:  $grid-container-md,
-    lg:  $grid-container-lg,
-    xl:  $grid-container-xl,
-    xxl: $grid-container-xxl,
-) !default;
-// scss-docs-end grid-container-max-widths
-
-@include _assert-ascending($grid-container-max-widths, "$grid-container-max-widths");
-
-// scss-docs-start grid-containers
-$container-3xs: 16rem !default;
-$container-2xs: 18rem !default;
-$container-xs:  20rem !default;
-$container-sm:  24rem !default;
-$container-md:  28rem !default;
-$container-lg:  32rem !default;
-$container-xl:  36rem !default;
-$container-2xl: 42rem !default;
-$container-3xl: 48rem !default;
-$container-4xl: 56rem !default;
-$container-5xl: 64rem !default;
-$container-6xl: 72rem !default;
-$container-7xl: 80rem !default;
-$grid-containers: (
-    3xs: $container-3xs,
-    2xs: $container-2xs,
-    xs: $container-xs,
-    sm: $container-sm,
-    md: $container-md,
-    lg: $container-lg,
-    xl: $container-xl,
-    2xl: $container-2xl,
-    3xl: $container-3xl,
-    4xl: $container-4xl,
-    5xl: $container-5xl,
-    6xl: $container-6xl,
-    7xl: $container-7xl,
-) !default;
-// scss-docs-end grid-containers
-
-// scss-docs-start fractions
-$fraction-auto:     auto !default;
-$fraction-1:   8.333333% !default;
-$fraction-2:  16.666667% !default;
-$fraction-3: 25% !default;
-$fraction-4:  33.333333% !default;
-$fraction-5:  41.666667% !default;
-$fraction-6: 50% !default;
-$fraction-7:  58.333333% !default;
-$fraction-8:  66.666667% !default;
-$fraction-9: 75% !default;
-$fraction-10: 83.333333% !default;
-$fraction-11: 91.666667% !default;
-$fraction-full: 100% !default;
-$fractions: (
-    auto: auto,
-    "1\\/12": $fraction-1,
-    "2\\/12": $fraction-2,
-    "3\\/12": $fraction-3,
-    "4\\/12": $fraction-4,
-    "5\\/12": $fraction-5,
-    "6\\/12": $fraction-6,
-    "7\\/12": $fraction-7,
-    "8\\/12": $fraction-8,
-    "9\\/12": $fraction-9,
-    "10\\/12": $fraction-10,
-    "11\\/12": $fraction-11,
-    full: $fraction-full
-) !default;
-// scss-docs-start fractions
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-text-align: null !default;
-$body-color: $gray-900 !default;
-$body-bg: $white !default;
+$body-text-align:           null !default;
+$body-color:                $gray-900 !default;
+$body-bg:                   $white !default;
 
-$body-secondary-color: rgba($body-color, 0.75) !default;
-$body-secondary-bg: $gray-200 !default;
+$body-secondary-color:      rgba($body-color, .75) !default;
+$body-secondary-bg:         $gray-200 !default;
 
-$body-tertiary-color: rgba($body-color, 0.5) !default;
-$body-tertiary-bg: $gray-100 !default;
+$body-tertiary-color:       rgba($body-color, .5) !default;
+$body-tertiary-bg:          $gray-100 !default;
 
-$body-emphasis-color: $black !default;
+$body-emphasis-color:       $black !default;
 
-// Dark color mode variables
+// Links
 //
-// Custom variables for the `[data-bs-theme="dark"]` theme. Use this as a starting point for your own custom color modes by creating a new theme-specific file like `_variables-dark.scss` and adding the variables you need.
+// Style anchor elements.
 
-$body-color-dark:                   $gray-300 !default;
-// $body-bg-dark:                      $gray-900 !default;
-// $body-secondary-color-dark:         rgba($body-color-dark, .75) !default;
-// $body-secondary-bg-dark:            $gray-800 !default;
-// $body-tertiary-color-dark:          rgba($body-color-dark, .5) !default;
-// $body-tertiary-bg-dark:             mix($gray-800, $gray-900, 50%) !default;
-// $body-emphasis-color-dark:          $white !default;
-// $border-color-dark:                 $gray-700 !default;
-// $border-color-translucent-dark:     rgba($white, .15) !default;
+$link-color:                              $primary !default;
+$link-decoration:                         underline !default;
+$link-shade-percentage:                   20% !default;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration:                   null !default;
 
-// scss-docs-start zindex-levels-map
-$zindex-levels: (
-    n1: -1,
-    0: 0,
-    10: 10,
-    20: 20,
-    30: 30,
-    40: 40,
-    50: 50
+$stretched-link-pseudo-element:           after !default;
+$stretched-link-z-index:                  1 !default;
+
+// Icon links
+// scss-docs-start icon-link-variables
+$icon-link-gap:               .375rem !default;
+$icon-link-underline-offset:  .25em !default;
+$icon-link-icon-size:         1em !default;
+$icon-link-icon-transition:   .2s ease-in-out transform !default;
+$icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
+// scss-docs-end icon-link-variables
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1rem !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// stylelint-enable value-keyword-case
+$font-family-base:            var(#{$prefix}font-sans-serif) !default;
+$font-family-code:            var(#{$prefix}font-monospace) !default;
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+// scss-docs-end font-variables
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
 ) !default;
-// scss-docs-end zindex-levels-map
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        null !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+) !default;
+
+$display-font-family: null !default;
+$display-font-style:  null !default;
+$display-font-weight: 300 !default;
+$display-line-height: $headings-line-height !default;
+// scss-docs-end display-headings
+
+// scss-docs-start type-variables
+$lead-font-size:              $font-size-base * 1.25 !default;
+$lead-font-weight:            300 !default;
+
+$small-font-size:             .875em !default;
+
+$sub-sup-font-size:           .75em !default;
+
+// fusv-disable
+$text-muted:                  var(#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
+// fusv-enable
+
+$initialism-font-size:        $small-font-size !default;
+
+$blockquote-margin-y:         $spacer !default;
+$blockquote-font-size:        $font-size-base * 1.25 !default;
+$blockquote-footer-color:     $gray-600 !default;
+$blockquote-footer-font-size: $small-font-size !default;
+
+$hr-margin-y:                 $spacer !default;
+$hr-color:                    inherit !default;
+
+// fusv-disable
+$hr-bg-color:                 null !default; // Deprecated in v5.2.0
+$hr-height:                   null !default; // Deprecated in v5.2.0
+// fusv-enable
+
+$hr-border-color:             null !default; // Allows for inherited colors
+$hr-border-width:             var(#{$prefix}border-width) !default;
+$hr-opacity:                  .25 !default;
+
+// scss-docs-start vr-variables
+$vr-border-width:             var(#{$prefix}border-width) !default;
+// scss-docs-end vr-variables
+
+$legend-margin-bottom:        .5rem !default;
+$legend-font-size:            1.5rem !default;
+$legend-font-weight:          null !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$list-inline-padding:         .5rem !default;
+
+$mark-padding:                .1875em !default;
+$mark-color:                  $body-color !default;
+$mark-bg:                     $yellow-100 !default;
+// scss-docs-end type-variables
+
+
+// Code
+
+$code-font-size:                    $small-font-size !default;
+$code-color:                        $pink !default;
+
+$kbd-padding-y:                     .1875rem !default;
+$kbd-padding-x:                     .375rem !default;
+$kbd-font-size:                     $code-font-size !default;
+$kbd-color:                         var(#{$prefix}body-bg) !default;
+$kbd-bg:                            var(#{$prefix}body-color) !default;
+$nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
+
+$pre-color:                         null !default;
+
+
+// scss-docs-start border-variables
+$border-width:                1px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+) !default;
+$border-style:                solid !default;
+$border-color:                $gray-300 !default;
+$border-color-translucent:    rgba($black, .175) !default;
+// scss-docs-end border-variables
+
+// scss-docs-start border-radius-variables
+$border-radius:               .375rem !default;
+$border-radius-sm:            .25rem !default;
+$border-radius-lg:            .5rem !default;
+$border-radius-xl:            1rem !default;
+$border-radius-xxl:           2rem !default;
+$border-radius-full:          50rem !default;
+// scss-docs-end border-radius-variables
+// fusv-disable
+$border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
+// fusv-enable
+
+// scss-docs-start box-shadow-variables
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+// scss-docs-end box-shadow-variables
+
+// Gradient
+//
+// The gradient which is added to components if `$enable-gradients` is `true`
+// This gradient is also added to elements with `.bg-gradient`
+// scss-docs-start variable-gradient
+$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
+// scss-docs-end variable-gradient
