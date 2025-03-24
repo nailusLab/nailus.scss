@@ -1,5 +1,32 @@
+$light-primary-content:   #005355 !default;
+$light-secondary-content: #08040c !default;
+$light-success-content:   #000a02 !default;
+$light-info-content:      #d2e2ff !default;
+$light-warning-content:   #110500 !default;
+$light-danger-content:    #180403 !default;
+$light-accent-content:    #161308 !default;
+$light-neutral-content:   #01070e !default;
+
+$light-base-content:      #d4deef !default;
+$light-base-200-content:  #2e5497 !default;
+$light-base-300-content:  #294b88 !default;
+$lights-colors: (
+    primary-content: $light-primary-content,
+    secondary-content: $light-secondary-content,
+    success-content: $light-success-content,
+    info-content: $light-info-content,
+    warning-content: $light-warning-content,
+    danger-content: $light-danger-content,
+    accent-content: $light-accent-content,
+    neutral-content: $light-neutral-content,
+    base-content: $light-base-content,
+    base-200-content: $light-base-200-content,
+    base-300-content: $light-base-300-content,
+) !default;
+
+$lights-colors-rgb: map-loop($lights-colors, to-rgb, "$value") !default;
+
 @if $enable-light-mode {
-    :root,
     [data-bs-theme="light"] {
         // Note: Custom variable values only support SassScript inside `#{}`.
 
@@ -7,112 +34,77 @@
         //
         // Generate palettes for full colors, grays, and theme colors.
 
-        @each $color, $value in $colors {
-            #{$prefix}#{$color}: #{$value};
-        }
+        // @each $color, $value in $colors {
+        //     #{$prefix}#{$color}: #{$value};
+        // }
 
-        @each $color, $value in $grays {
-            #{$prefix}#{$color}: #{$value};
-        }
+        // @each $color, $value in $grays {
+        //     #{$prefix}#{$color}: #{$value};
+        // }
 
-        @each $color, $value in $theme-colors {
-            #{$prefix}#{$color}: #{$value};
-        }
+        // @each $color, $value in $theme-colors {
+        //     #{$prefix}#{$color}: #{$value};
+        // }
 
+        // #{$prefix}#{$color}-rgb: #{$value};
         @each $color, $value in $theme-colors-rgb {
-            #{$prefix}#{$color}-rgb: #{$value};
+            #{$prefix}#{$color}: #{$value};
         }
 
-        @each $color, $value in $theme-colors-text {
-            #{$prefix}#{$color}-text-emphasis: #{$value};
-        }
+        // @each $color, $value in $lights-colors-rgb {
+        //     #{$prefix}#{$color}: #{$value};
+        // }
 
-        @each $color, $value in $theme-colors-bg-subtle {
-            #{$prefix}#{$color}-bg-subtle: #{$value};
-        }
+        // @each $color, $value in $theme-colors-text {
+        //     #{$prefix}#{$color}-text-emphasis: #{$value};
+        // }
 
-        @each $color, $value in $theme-colors-border-subtle {
-            #{$prefix}#{$color}-border-subtle: #{$value};
-        }
+        // @each $color, $value in $theme-colors-bg-subtle {
+        //     #{$prefix}#{$color}-bg-subtle: #{$value};
+        // }
 
-        #{$prefix}white-rgb: #{to-rgb($white)};
-        #{$prefix}black-rgb: #{to-rgb($black)};
+        // @each $color, $value in $theme-colors-border-subtle {
+        //     #{$prefix}#{$color}-border-subtle: #{$value};
+        // }
 
-        // Fonts
+        // #{$prefix}body-color: #{$body-color};
+        #{$prefix}body-color: #{to-rgb($body-color)};
+        // #{$prefix}body-bg: #{$body-bg};
+        #{$prefix}body-bg: #{to-rgb($body-bg)};
 
-        // Note: Use `inspect` for lists so that quoted items keep the quotes.
-        // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
-        #{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
-        #{$prefix}font-monospace: #{inspect($font-family-monospace)};
-        #{$prefix}gradient: #{$gradient};
+        // #{$prefix}emphasis-color: #{$body-emphasis-color};
+        // #{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
 
-        // Root and body
-        // scss-docs-start root-body-variables
-        @if $font-size-root != null {
-            #{$prefix}root-font-size: #{$font-size-root};
-        }
-        #{$prefix}body-font-family: #{inspect($font-family-base)};
-        @include rfs($font-size-base, #{$prefix}body-font-size);
-        #{$prefix}body-font-weight: #{$font-weight-base};
-        #{$prefix}body-line-height: #{$line-height-base};
-        @if $body-text-align != null {
-            #{$prefix}body-text-align: #{$body-text-align};
-        }
+        // #{$prefix}secondary-color: #{$body-secondary-color};
+        // #{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color)};
+        // #{$prefix}secondary-bg: #{$body-secondary-bg};
+        // #{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
 
-        #{$prefix}body-color: #{$body-color};
-        #{$prefix}body-color-rgb: #{to-rgb($body-color)};
-        #{$prefix}body-bg: #{$body-bg};
-        #{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
-
-        #{$prefix}emphasis-color: #{$body-emphasis-color};
-        #{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
-
-        #{$prefix}secondary-color: #{$body-secondary-color};
-        #{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color)};
-        #{$prefix}secondary-bg: #{$body-secondary-bg};
-        #{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
-
-        #{$prefix}tertiary-color: #{$body-tertiary-color};
-        #{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
-        #{$prefix}tertiary-bg: #{$body-tertiary-bg};
-        #{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
+        // #{$prefix}tertiary-color: #{$body-tertiary-color};
+        // #{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
+        // #{$prefix}tertiary-bg: #{$body-tertiary-bg};
+        // #{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
         // scss-docs-end root-body-variables
 
         #{$prefix}heading-color: #{$headings-color};
 
-        #{$prefix}link-color: #{$link-color};
-        #{$prefix}link-color-rgb: #{to-rgb($link-color)};
-        #{$prefix}link-decoration: #{$link-decoration};
+        // #{$prefix}link-color: #{$link-color};
+        #{$prefix}link-color: #{to-rgb($link-color)};
 
-        #{$prefix}link-hover-color: #{$link-hover-color};
-        #{$prefix}link-hover-color-rgb: #{to-rgb($link-hover-color)};
+        // #{$prefix}link-hover-color: #{$link-hover-color};
+        #{$prefix}link-hover-color: #{to-rgb($link-hover-color)};
 
         @if $link-hover-decoration != null {
             #{$prefix}link-hover-decoration: #{$link-hover-decoration};
         }
 
-        #{$prefix}code-color: #{$code-color};
-        #{$prefix}highlight-color: #{$mark-color};
-        #{$prefix}highlight-bg: #{$mark-bg};
+        #{$prefix}code-color: #{to-rgb($code-color)};
+        #{$prefix}highlight-color: #{to-rgb($mark-color)};
+        #{$prefix}highlight-bg: #{to-rgb($mark-bg)};
 
         // scss-docs-start root-border-var
-        #{$prefix}border-width: #{$border-width};
-        #{$prefix}border-style: #{$border-style};
-        #{$prefix}border-color: #{$border-color};
+        #{$prefix}border-color: #{to-rgb($border-color)};
         #{$prefix}border-color-translucent: #{$border-color-translucent};
-
-        #{$prefix}border-radius: #{$border-radius};
-        #{$prefix}border-radius-sm: #{$border-radius-sm};
-        #{$prefix}border-radius-lg: #{$border-radius-lg};
-        #{$prefix}border-radius-xl: #{$border-radius-xl};
-        #{$prefix}border-radius-xxl: #{$border-radius-xxl};
-        #{$prefix}border-radius-full: #{$border-radius-full};
-        // scss-docs-end root-border-var
-
-        #{$prefix}box-shadow: #{$box-shadow};
-        #{$prefix}box-shadow-sm: #{$box-shadow-sm};
-        #{$prefix}box-shadow-lg: #{$box-shadow-lg};
-        #{$prefix}box-shadow-inset: #{$box-shadow-inset};
 
         // // Focus styles
         // // scss-docs-start root-focus-variables

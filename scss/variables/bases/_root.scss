@@ -13,57 +13,94 @@ $prefix: --#{$variable-prefix} !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
-  5: $spacer * 3,
+  5: $spacer * 3
 ) !default;
 // scss-docs-end spacer-variables-maps
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// scss-docs-start grid-containers
+$grid-containers: (
+  3xs: 16rem,
+  2xs: 18rem,
+  xs: 20rem,
+  sm: 24rem,
+  md: 28rem,
+  lg: 32rem,
+  xl: 36rem,
+  2xl: 42rem,
+  3xl: 48rem,
+  4xl: 56rem,
+  5xl: 64rem,
+  6xl: 72rem,
+  7xl: 80rem
+) !default;
+// scss-docs-end grid-containers
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-text-align:           null !default;
-$body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+$body-text-align: null !default;
+$body-color: $gray-900 !default;
+$body-bg: $white !default;
 
-$body-secondary-color:      rgba($body-color, .75) !default;
-$body-secondary-bg:         $gray-200 !default;
+$body-secondary-color: rgba($body-color, 0.75) !default;
+$body-secondary-bg: $gray-200 !default;
 
-$body-tertiary-color:       rgba($body-color, .5) !default;
-$body-tertiary-bg:          $gray-100 !default;
+$body-tertiary-color: rgba($body-color, 0.5) !default;
+$body-tertiary-bg: $gray-100 !default;
 
-$body-emphasis-color:       $black !default;
+$body-emphasis-color: $black !default;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
-$link-decoration:                         underline !default;
-$link-shade-percentage:                   20% !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
-$link-hover-decoration:                   null !default;
+$link-color: $primary !default;
+$link-decoration: underline !default;
+$link-shade-percentage: 20% !default;
+$link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration: null !default;
 
-$stretched-link-pseudo-element:           after !default;
-$stretched-link-z-index:                  1 !default;
+$stretched-link-pseudo-element: after !default;
+$stretched-link-z-index: 1 !default;
 
 // Icon links
 // scss-docs-start icon-link-variables
-$icon-link-gap:               .375rem !default;
-$icon-link-underline-offset:  .25em !default;
-$icon-link-icon-size:         1em !default;
-$icon-link-icon-transition:   .2s ease-in-out transform !default;
-$icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
+$icon-link-gap: 0.375rem !default;
+$icon-link-underline-offset: 0.25em !default;
+$icon-link-icon-size: 1em !default;
+$icon-link-icon-transition: 0.2s ease-in-out transform !default;
+$icon-link-icon-transform: translate3d(0.25em, 0, 0) !default;
 // scss-docs-end icon-link-variables
 
 // Paragraphs
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom: 1rem !default;
 
 // Typography
 //
@@ -71,39 +108,52 @@ $paragraph-margin-bottom:   1rem !default;
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif:
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  "Noto Sans",
+  "Liberation Sans",
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
-$font-family-base:            var(#{$prefix}font-sans-serif) !default;
-$font-family-code:            var(#{$prefix}font-monospace) !default;
+$font-family-base: var(#{$prefix}font-sans-serif) !default;
+$font-family-code: var(#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
-$font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
-$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
 
-$font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
-$font-weight-semibold:        600 !default;
-$font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
 
-$font-weight-base:            $font-weight-normal !default;
+$font-weight-base: $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
-$line-height-lg:              2 !default;
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -118,12 +168,12 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
-$headings-font-family:        null !default;
-$headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              inherit !default;
+$headings-margin-bottom: $spacer * 0.5 !default;
+$headings-font-family: null !default;
+$headings-font-style: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: inherit !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
@@ -137,77 +187,75 @@ $display-font-sizes: (
 ) !default;
 
 $display-font-family: null !default;
-$display-font-style:  null !default;
+$display-font-style: null !default;
 $display-font-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-weight: 300 !default;
 
-$small-font-size:             .875em !default;
+$small-font-size: 0.875em !default;
 
-$sub-sup-font-size:           .75em !default;
+$sub-sup-font-size: 0.75em !default;
 
 // fusv-disable
-$text-muted:                  var(#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
+$text-muted: var(#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
 // fusv-enable
 
-$initialism-font-size:        $small-font-size !default;
+$initialism-font-size: $small-font-size !default;
 
-$blockquote-margin-y:         $spacer !default;
-$blockquote-font-size:        $font-size-base * 1.25 !default;
-$blockquote-footer-color:     $gray-600 !default;
+$blockquote-margin-y: $spacer !default;
+$blockquote-font-size: $font-size-base * 1.25 !default;
+$blockquote-footer-color: $gray-600 !default;
 $blockquote-footer-font-size: $small-font-size !default;
 
-$hr-margin-y:                 $spacer !default;
-$hr-color:                    inherit !default;
+$hr-margin-y: $spacer !default;
+$hr-color: inherit !default;
 
 // fusv-disable
-$hr-bg-color:                 null !default; // Deprecated in v5.2.0
-$hr-height:                   null !default; // Deprecated in v5.2.0
+$hr-bg-color: null !default; // Deprecated in v5.2.0
+$hr-height: null !default; // Deprecated in v5.2.0
 // fusv-enable
 
-$hr-border-color:             null !default; // Allows for inherited colors
-$hr-border-width:             var(#{$prefix}border-width) !default;
-$hr-opacity:                  .25 !default;
+$hr-border-color: null !default; // Allows for inherited colors
+$hr-border-width: var(#{$prefix}border-width) !default;
+$hr-opacity: 0.25 !default;
 
 // scss-docs-start vr-variables
-$vr-border-width:             var(#{$prefix}border-width) !default;
+$vr-border-width: var(#{$prefix}border-width) !default;
 // scss-docs-end vr-variables
 
-$legend-margin-bottom:        .5rem !default;
-$legend-font-size:            1.5rem !default;
-$legend-font-weight:          null !default;
+$legend-margin-bottom: 0.5rem !default;
+$legend-font-size: 1.5rem !default;
+$legend-font-weight: null !default;
 
-$dt-font-weight:              $font-weight-bold !default;
+$dt-font-weight: $font-weight-bold !default;
 
-$list-inline-padding:         .5rem !default;
+$list-inline-padding: 0.5rem !default;
 
-$mark-padding:                .1875em !default;
-$mark-color:                  $body-color !default;
-$mark-bg:                     $yellow-100 !default;
+$mark-padding: 0.1875em !default;
+$mark-color: $body-color !default;
+$mark-bg: $yellow-100 !default;
 // scss-docs-end type-variables
-
 
 // Code
 
-$code-font-size:                    $small-font-size !default;
-$code-color:                        $pink !default;
+$code-font-size: $small-font-size !default;
+$code-color: $pink !default;
 
-$kbd-padding-y:                     .1875rem !default;
-$kbd-padding-x:                     .375rem !default;
-$kbd-font-size:                     $code-font-size !default;
-$kbd-color:                         var(#{$prefix}body-bg) !default;
-$kbd-bg:                            var(#{$prefix}body-color) !default;
-$nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
+$kbd-padding-y: 0.1875rem !default;
+$kbd-padding-x: 0.375rem !default;
+$kbd-font-size: $code-font-size !default;
+$kbd-color: var(#{$prefix}body-bg) !default;
+$kbd-bg: var(#{$prefix}body-color) !default;
+$nested-kbd-font-weight: null !default; // Deprecated in v5.2.0, removing in v6
 
-$pre-color:                         null !default;
-
+$pre-color: null !default;
 
 // scss-docs-start border-variables
-$border-width:                1px !default;
+$border-width: 1px !default;
 $border-widths: (
   1: 1px,
   2: 2px,
@@ -215,28 +263,28 @@ $border-widths: (
   4: 4px,
   5: 5px
 ) !default;
-$border-style:                solid !default;
-$border-color:                $gray-300 !default;
-$border-color-translucent:    rgba($black, .175) !default;
+$border-style: solid !default;
+$border-color: $gray-300 !default;
+$border-color-translucent: rgba($black, 0.175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
-$border-radius-full:          50rem !default;
+$border-radius: 0.375rem !default;
+$border-radius-sm: 0.25rem !default;
+$border-radius-lg: 0.5rem !default;
+$border-radius-xl: 1rem !default;
+$border-radius-xxl: 2rem !default;
+$border-radius-full: 50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
-$border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
+$border-radius-2xl: $border-radius-xxl !default; // Deprecated in v5.3.0
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+$box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
 // scss-docs-end box-shadow-variables
 
 // Gradient
@@ -244,5 +292,198 @@ $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 // The gradient which is added to components if `$enable-gradients` is `true`
 // This gradient is also added to elements with `.bg-gradient`
 // scss-docs-start variable-gradient
-$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
+$gradient: linear-gradient(180deg, rgba($white, 0.15), rgba($white, 0)) !default;
 // scss-docs-end variable-gradient
+
+$body-color-dark: $gray-300 !default;
+$body-bg-dark: $gray-900 !default;
+$body-secondary-color-dark: rgba($body-color-dark, 0.75) !default;
+$body-secondary-bg-dark: $gray-800 !default;
+$body-tertiary-color-dark: rgba($body-color-dark, 0.5) !default;
+$body-tertiary-bg-dark: mix($gray-800, $gray-900, 50%) !default;
+$body-emphasis-color-dark: $white !default;
+$border-color-dark: $gray-700 !default;
+$border-color-translucent-dark: rgba($white, 0.15) !default;
+$headings-color-dark: inherit !default;
+$link-color-dark: tint-color($primary, 40%) !default;
+$link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage) !default;
+$code-color-dark: tint-color($code-color, 40%) !default;
+$mark-color-dark: $body-color-dark !default;
+$mark-bg-dark: $yellow-800 !default;
+
+$text-xs: 0.75rem !default;
+$text-sm: 0.875rem !default;
+$text-base: 1rem !default;
+$text-lg: 1.125rem !default;
+$text-xl: 1.25rem !default;
+$text-2xl: 1.5rem !default;
+$text-3xl: 1.875rem !default;
+$text-4xl: 2.25rem !default;
+$text-5xl: 3rem !default;
+$text-6xl: 3.75rem !default;
+$text-7xl: 4.5rem !default;
+$text-8xl: 6rem !default;
+$text-9xl: 8rem !default;
+$texts: (
+  xs: $text-xs,
+  sm: $text-sm,
+  base: $text-base,
+  lg: $text-lg,
+  xl: $text-xl,
+  2xl: $text-2xl,
+  3xl: $text-3xl,
+  4xl: $text-4xl,
+  5xl: $text-5xl,
+  6xl: $text-6xl,
+  7xl: $text-7xl,
+  8xl: $text-8xl,
+  9xl: $text-9xl
+) !default;
+
+$text-xs--line-height: "calc(1 / 0.75)" !default;
+$text-sm--line-height: "calc(1.25 / 0.875)" !default;
+$text-base--line-height: "calc(1.5 / 1)" !default;
+$text-lg--line-height: "calc(1.75 / 1.125)" !default;
+$text-xl--line-height: "calc(1.75 / 1.25)" !default;
+$text-2xl--line-height: "calc(2 / 1.5)" !default;
+$text-3xl--line-height: "calc(2.25 / 1.875)" !default;
+$text-4xl--line-height: "calc(2.5 / 2.25)" !default;
+$text-5xl--line-height: 1 !default;
+$text-6xl--line-height: 1 !default;
+$text-7xl--line-height: 1 !default;
+$text-8xl--line-height: 1 !default;
+$text-9xl--line-height: 1 !default;
+$text-line-heights: (
+  xs: $text-xs--line-height,
+  sm: $text-sm--line-height,
+  base: $text-base--line-height,
+  lg: $text-lg--line-height,
+  xl: $text-xl--line-height,
+  2xl: $text-2xl--line-height,
+  3xl: $text-3xl--line-height,
+  4xl: $text-4xl--line-height,
+  5xl: $text-5xl--line-height,
+  6xl: $text-6xl--line-height,
+  7xl: $text-7xl--line-height,
+  8xl: $text-8xl--line-height,
+  9xl: $text-9xl--line-height
+) !default;
+
+$font-weight-thin: 100 !default;
+$font-weight-extralight: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extrabold: 800 !default;
+$font-weight-black: 900 !default;
+$font-weights: (
+  "thin": $font-weight-thin,
+  "extralight": $font-weight-extralight,
+  "light": $font-weight-light,
+  "normal": $font-weight-normal,
+  "medium": $font-weight-medium,
+  "semibold": $font-weight-semibold,
+  "bold": $font-weight-bold,
+  "extrabold": $font-weight-extrabold,
+  "black": $font-weight-black
+) !default;
+
+$tracking-tighter: -0.05em !default;
+$tracking-tight: -0.025em !default;
+$tracking-normal: 0em !default;
+$tracking-wide: 0.025em !default;
+$tracking-wider: 0.05em !default;
+$tracking-widest: 0.1em !default;
+$trackings: (
+  "tighter": $tracking-tighter,
+  "tight": $tracking-tight,
+  "normal": $tracking-normal,
+  "wide": $tracking-wide,
+  "wider": $tracking-wider,
+  "widest": $tracking-widest
+) !default;
+
+$leading-tight: 1.25 !default;
+$leading-snug: 1.375 !default;
+$leading-normal: 1.5 !default;
+$leading-relaxed: 1.625 !default;
+$leading-loose: 2 !default;
+$leadings: (
+  "tight": $leading-tight,
+  "snug": $leading-snug,
+  "normal": $leading-normal,
+  "relaxed": $leading-relaxed,
+  "loose": $leading-loose
+) !default;
+
+$radius-xs: 0.125rem !default;
+$radius-sm: 0.25rem !default;
+$radius-md: 0.375rem !default;
+$radius-lg: 0.5rem !default;
+$radius-xl: 0.75rem !default;
+$radius-2xl: 1rem !default;
+$radius-3xl: 1.5rem !default;
+$radius-4xl: 2rem !default;
+$radius: (
+  sm: $radius-sm,
+  md: $radius-md,
+  lg: $radius-lg,
+  xl: $radius-xl,
+  2xl: $radius-2xl,
+  3xl: $radius-3xl,
+  4xl: $radius-4xl
+) !default;
+
+$blur-xs:   4px !default;
+$blur-sm:   8px !default;
+$blur-md:  12px !default;
+$blur-lg:  16px !default;
+$blur-xl:  24px !default;
+$blur-2xl: 40px !default;
+$blur-3xl: 64px !default;
+$blurs: (
+  xs: $blur-xs,
+  sm: $blur-sm,
+  md: $blur-md,
+  lg: $blur-lg,
+  xl: $blur-xl,
+  2xl: $blur-2xl,
+  3xl: $blur-3xl,
+) !default;
+
+$ease-in: cubic-bezier(0.4, 0, 1, 1)  !default;
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$ease-out: cubic-bezier(0, 0, 0.2, 1) !default;
+$transitions-timing: (
+  in: $ease-in,
+  in-out: $ease-in-out,
+  out: $ease-out,
+) !default;
+
+$perspective-dramatic: 100px !default;
+$perspective-near: 300px !default;
+$perspective-normal: 500px !default;
+$perspective-midrange: 800px !default;
+$perspective-distant: 1200px !default;
+$perspectives: (
+  dramatic: $perspective-dramatic,
+  near: $perspective-near,
+  normal: $perspective-normal,
+  midrange: $perspective-midrange,
+  distant: $perspective-distant,
+) !default;
+
+$aspect-square:    #{"1 / 1"} !default;
+$aspect-default:   #{"4 / 3"} !default;
+$aspect-video:    #{"16 / 9"} !default;
+$aspect-portrait: #{"9 / 16"} !default;
+$aspect-paysage:  #{"21 / 9"} !default;
+$aspects-ratio: (
+  square: $aspect-square,
+  default: $aspect-default,
+  video: $aspect-video,
+  portrait: $aspect-portrait,
+  paysage: $aspect-paysage,
+) !default;

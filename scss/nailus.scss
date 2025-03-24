@@ -15,6 +15,7 @@
 
 // Importing themes for styling
 @import "themes/themes";
+@import "bases/bases";
 
 // Importing components for UI elements
 @import "components/components";
@@ -23,5 +24,4 @@
 @import "utilities/utilities";
 
 // Uncomment the following lines if needed:
-// @import "bases/bases"; // Base styles
 // @import "utilities/api"; // API-related utilities
