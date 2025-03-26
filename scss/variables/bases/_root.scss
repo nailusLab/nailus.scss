@@ -3,6 +3,15 @@
 $variable-prefix: ns- !default;
 $prefix: --#{$variable-prefix} !default;
 
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+  ("<", "%3c"),
+  (">", "%3e"),
+  ("#", "%23"),
+  ("(", "%28"),
+  (")", "%29"),
+) !default;
+
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
@@ -428,7 +437,7 @@ $radius-3xl: 1.5rem !default;
 $radius-4xl: 2rem !default;
 $radius: (
   sm: $radius-sm,
-  md: $radius-md,
+  null: $radius-md,
   lg: $radius-lg,
   xl: $radius-xl,
   2xl: $radius-2xl,

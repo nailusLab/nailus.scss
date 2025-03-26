@@ -42,7 +42,7 @@
     }
 
     @each $radius, $value in $radius {
-        #{$prefix}radius-#{$radius}: #{$value};
+        #{$prefix}radius#{if($radius != null, "-"+$radius, $radius)}: #{$value};
     }
 
     @each $blur, $value in $blurs {
